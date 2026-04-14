@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useCart } from '@/context/CartContext';
-import { useAuth } from '@/context/AuthContext';
+import { useUser, SignInButton, SignUpButton, UserButton } from '@clerk/nextjs';
 import styles from './Navbar.module.css';
 
 const categories = [
@@ -14,7 +14,7 @@ export default function Navbar() {
   const [search, setSearch] = useState('');
   const [accountOpen, setAccountOpen] = useState(false);
   const { cartCount } = useCart();
-  const { user, logout } = useAuth();
+  const { isLoaded, isSignedIn, user } = useUser();
   const router = useRouter();
   const dropdownRef = useRef(null);
 
@@ -35,12 +35,6 @@ export default function Navbar() {
     } else {
       router.push('/products');
     }
-  };
-
-  const handleLogout = () => {
-    logout();
-    setAccountOpen(false);
-    router.push('/');
   };
 
   return (
@@ -95,46 +89,44 @@ export default function Navbar() {
           </div>
 
           {/* Account */}
-          <div className={styles.navItem} ref={dropdownRef} style={{ position: 'relative' }}>
-            <div
-              className={styles.accountBtn}
-              onClick={() => setAccountOpen(!accountOpen)}
-            >
-              <div className={styles.navLabel}>
-                Hello, {user ? user.name.split(' ')[0] : 'Sign in'}
-              </div>
-              <div className={styles.navBold}>
-                Account & Lists <span className={styles.caret}>▾</span>
-              </div>
-            </div>
-            {accountOpen && (
-              <div className={styles.dropdown}>
-                {user ? (
-                  <>
-                    <div className={styles.dropdownUser}>Welcome, {user.name}!</div>
-                    <Link href="/orders" className={styles.dropdownItem} onClick={() => setAccountOpen(false)}>
-                      Your Orders
-                    </Link>
-                    <button className={styles.dropdownItem} onClick={handleLogout}>
-                      Sign Out
-                    </button>
-                  </>
-                ) : (
-                  <>
-                    <Link href="/login" className={styles.dropdownSignIn} onClick={() => setAccountOpen(false)}>
-                      Sign in
-                    </Link>
+          <div className={styles.navItem} ref={dropdownRef} style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
+            {isSignedIn ? (
+              <>
+                <div style={{ marginRight: '10px' }}>
+                  <div className={styles.navLabel}>
+                    Hello, {isLoaded && user ? user.firstName || 'User' : '...'}
+                  </div>
+                  <div className={styles.navBold}>Account & Lists</div>
+                </div>
+                <UserButton afterSignOutUrl="/" />
+              </>
+            ) : (
+              <>
+                <div
+                  className={styles.accountBtn}
+                  onClick={() => setAccountOpen(!accountOpen)}
+                >
+                  <div className={styles.navLabel}>Hello, Sign in</div>
+                  <div className={styles.navBold}>
+                    Account & Lists <span className={styles.caret}>▾</span>
+                  </div>
+                </div>
+                {accountOpen && (
+                  <div className={styles.dropdown}>
+                    <SignInButton mode="modal">
+                      <button className={styles.dropdownSignIn} onClick={() => setAccountOpen(false)}>
+                        Sign in
+                      </button>
+                    </SignInButton>
                     <p className={styles.dropdownNew}>
                       New customer?{' '}
-                      <Link href="/signup" onClick={() => setAccountOpen(false)}>Start here</Link>
+                      <SignUpButton mode="modal">
+                        <span style={{ cursor: 'pointer', color: '#007185' }} onClick={() => setAccountOpen(false)}>Start here</span>
+                      </SignUpButton>
                     </p>
-                    <hr className={styles.dropdownDivider}/>
-                    <Link href="/orders" className={styles.dropdownItem} onClick={() => setAccountOpen(false)}>
-                      Your Orders
-                    </Link>
-                  </>
+                  </div>
                 )}
-              </div>
+              </>
             )}
           </div>
 

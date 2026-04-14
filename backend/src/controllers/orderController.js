@@ -151,8 +151,13 @@ const getOrdersBySession = async (req, res) => {
 
 const getOrdersByUser = async (req, res) => {
   try {
+    const { sessionId } = req.query;
+    const whereClause = sessionId 
+      ? { OR: [{ userId: req.userId }, { sessionId }] }
+      : { userId: req.userId };
+
     const orders = await prisma.order.findMany({
-      where: { userId: req.userId },
+      where: whereClause,
       include: {
         orderItems: {
           include: {

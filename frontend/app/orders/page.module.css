@@ -86,6 +86,28 @@
 }
 .shipTo { font-size: 0.8rem; color: var(--amazon-text-secondary); }
 
+.showMoreContainer {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+}
+
+.showMoreButton {
+  padding: 8px 32px;
+  background: #f0f2f2;
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #0f1111;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(15,17,17,.15);
+  transition: all 0.2s;
+}
+
+.showMoreButton:hover {
+  background: #e3e6e6;
+}
+
 @media (max-width: 600px) {
   .itemImg { width: 70px; height: 70px; }
   .headerLeft { gap: 12px; }

@@ -1,30 +1,23 @@
-const jwt = require('jsonwebtoken');
+﻿const { requireAuth, clerkMiddleware } = require('@clerk/express');
 
-const authMiddleware = (req, res, next) => {
-  const token = req.header('Authorization')?.replace('Bearer ', '');
-  if (!token) {
-    return res.status(401).json({ error: 'No token, authorization denied' });
-  }
-  try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    req.userId = decoded.userId;
-    next();
-  } catch (err) {
-    res.status(401).json({ error: 'Token is not valid' });
-  }
-};
+try {
+  var authMiddleware = (req, res, next) => {
+    requireAuth()(req, res, (err) => {
+      if (err) return next(err);
+      req.userId = req.auth?.userId;
+      next();
+    });
+  };
+} catch(e) {
+  console.log(e);
+}
 
 const optionalAuth = (req, res, next) => {
-  const token = req.header('Authorization')?.replace('Bearer ', '');
-  if (token) {
-    try {
-      const decoded = jwt.verify(token, process.env.JWT_SECRET);
-      req.userId = decoded.userId;
-    } catch (err) {
-      // no-op — token invalid but optional
-    }
-  }
-  next();
+  clerkMiddleware()(req, res, (err) => {
+    if (err) return next(err);
+    req.userId = req.auth?.userId;
+    next();
+  });
 };
 
 module.exports = { authMiddleware, optionalAuth };

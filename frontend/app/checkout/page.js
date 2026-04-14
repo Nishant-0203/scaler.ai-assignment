@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useCart } from '@/context/CartContext';
-import { useAuth } from '@/context/AuthContext';
+import { useUser, useAuth } from '@clerk/nextjs';
 import { orderAPI } from '@/lib/api';
 import { getSessionId } from '@/lib/session';
 import styles from './page.module.css';
@@ -22,11 +22,12 @@ const INDIAN_STATES = [
 export default function CheckoutPage() {
   const router = useRouter();
   const { items, cartSubtotal, cartCount } = useCart();
-  const { user } = useAuth();
+  const { isLoaded, isSignedIn, user } = useUser();
+  const { getToken } = useAuth();
 
   const [formData, setFormData] = useState({
-    shippingName: user?.name || '',
-    shippingEmail: user?.email || '',
+    shippingName: user?.fullName || '',
+    shippingEmail: user?.primaryEmailAddress?.emailAddress || '',
     shippingPhone: '',
     shippingAddress: '',
     shippingCity: '',
@@ -39,7 +40,7 @@ export default function CheckoutPage() {
 
   useEffect(() => {
     if (user) {
-      setFormData(prev => ({ ...prev, shippingName: user.name, shippingEmail: user.email }));
+      setFormData(prev => ({ ...prev, shippingName: user.fullName || '', shippingEmail: user.primaryEmailAddress?.emailAddress || '' }));
     }
   }, [user]);
 
@@ -80,7 +81,9 @@ export default function CheckoutPage() {
     setPlacing(true);
     try {
       const sessionId = getSessionId();
-      const order = await orderAPI.create({ sessionId, ...formData });
+      let token = null;
+      if (isSignedIn) token = await getToken();
+      const order = await orderAPI.create({ sessionId, ...formData }, token);
       router.push(`/order-confirmation/${order.id}`);
     } catch (err) {
       console.error(err);

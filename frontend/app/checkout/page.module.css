@@ -52,8 +52,12 @@
 .stepTitle { font-size: 1.1rem; font-weight: 700; }
 .stepBody { padding: 20px; }
 
-.formGrid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.formGrid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+.formGrid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+.formGrid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+
+.formGrid2 .form-group, .formGrid3 .form-group {
+  margin-bottom: 0;
+}
 
 /* PAYMENT */
 .paymentOption {

@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { orderAPI } from '@/lib/api';
 import { getSessionId } from '@/lib/session';
-import { useAuth } from '@/context/AuthContext';
+import { useUser, useAuth } from '@clerk/nextjs';
 import styles from './page.module.css';
 
 const formatPrice = (n) =>
@@ -19,20 +19,32 @@ const STATUS_COLORS = {
 
 export default function OrdersPage() {
   const [orders, setOrders] = useState([]);
+  const [displayedCount, setDisplayedCount] = useState(5);
   const [loading, setLoading] = useState(true);
-  const { user } = useAuth();
+  const { isLoaded, isSignedIn, user } = useUser();
+  const { getToken } = useAuth();
 
   useEffect(() => {
-    const sessionId = getSessionId();
-    const fetch = user
-      ? orderAPI.getMyOrders()
-      : orderAPI.getBySession(sessionId);
-
-    fetch
-      .then(setOrders)
-      .catch(console.error)
-      .finally(() => setLoading(false));
-  }, [user]);
+    if (!isLoaded) return;
+    const loadOrders = async () => {
+      try {
+        const sessionId = getSessionId();
+        let data;
+        if (isSignedIn && user) {
+          const token = await getToken();
+          data = await orderAPI.getMyOrders(sessionId, token);
+        } else {
+          data = await orderAPI.getBySession(sessionId);
+        }
+        setOrders(data);
+      } catch (err) {
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    loadOrders();
+  }, [user, isLoaded, isSignedIn, getToken]);
 
   if (loading) return <div className="loading-overlay"><div className="spinner"/></div>;
 
@@ -52,7 +64,7 @@ export default function OrdersPage() {
           </div>
         ) : (
           <div className={styles.orderList}>
-            {orders.map(order => (
+            {orders.slice(0, displayedCount).map(order => (
               <div key={order.id} className={styles.orderCard}>
                 {/* Order Header */}
                 <div className={styles.orderHeader}>
@@ -121,6 +133,17 @@ export default function OrdersPage() {
                 </div>
               </div>
             ))}
+            
+            {orders.length > displayedCount && (
+              <div className={styles.showMoreContainer}>
+                <button 
+                  onClick={() => setDisplayedCount(prev => prev + 5)}
+                  className={styles.showMoreButton}
+                >
+                  Show More Orders
+                </button>
+              </div>
+            )}
           </div>
         )}
       </div>
