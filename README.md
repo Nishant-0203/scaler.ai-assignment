@@ -15,27 +15,29 @@ Amazon's UI patterns, layout structure, and interaction design.
 ## Setup Instructions
 
 ### Environment Setup
-Create a .env file in the ackend directory based on .env.example or with the following variables:
+Create a `.env` file in the `backend` directory based on `.env.example` or with the following variables:
+```env
 DATABASE_URL="postgresql://user:password@localhost:5432/ecommerce?schema=public"
 PORT=5000
+```
 
 ### Database Initialization
-1. Navigate to the ackend folder: cd backend
+1. Navigate to the `backend` folder: `cd backend`
 2. Install dependencies: 
-pm install
+`npm install`
 3. Run Prisma migrations: 
-px prisma migrate dev --name init
+`npx prisma migrate dev --name init`
 4. Seed the database with sample catalog: 
-ode prisma/seed.js
+`node prisma/seed.js`
 5. Start the backend server: 
-pm run dev (Runs on http://localhost:5000)
+`npm run dev` (Runs on http://localhost:5000)
 
 ### Frontend Initialization
-1. Navigate to the rontend folder: cd frontend
+1. Navigate to the `frontend` folder: `cd frontend`
 2. Install dependencies: 
-pm install
+`npm install`
 3. Start the Next.js development server: 
-pm run dev (Runs on http://localhost:3000)
+`npm run dev` (Runs on http://localhost:3000)
 
 ## Features Included
 -   **Product Listing**: Grid layouts, category filters, search input, price/ratings display.

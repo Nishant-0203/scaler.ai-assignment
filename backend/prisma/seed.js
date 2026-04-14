@@ -11,575 +11,4521 @@ const categories = [
 ];
 
 const products = [
-  // ELECTRONICS
   {
-    name: 'Apple iPhone 15 Pro Max (256GB) - Natural Titanium',
-    slug: 'apple-iphone-15-pro-max-256gb',
-    description: 'iPhone 15 Pro Max. Forged in titanium and featuring the groundbreaking A17 Pro chip, a customizable Action button, and the most powerful iPhone camera system ever.',
-    price: 134900, comparePrice: 159900, stock: 50, brand: 'Apple',
-    rating: 4.7, reviewCount: 12483, isFeatured: true, categorySlug: 'electronics',
-    images: [
-      { url: 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=600', isPrimary: true, displayOrder: 0 },
-      { url: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600', isPrimary: false, displayOrder: 1 },
-      { url: 'https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?w=600', isPrimary: false, displayOrder: 2 },
+    "name": "Echo Smartphone Ultra",
+    "slug": "electronics-smartphone-0",
+    "description": "A fantastic Smartphone for all your needs. Durable and long-lasting!",
+    "price": 3078,
+    "comparePrice": 4718,
+    "stock": 38,
+    "brand": "Echo",
+    "rating": 4.3,
+    "reviewCount": 88,
+    "isFeatured": false,
+    "categorySlug": "electronics",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
     ],
-    specs: [
-      { key: 'Display', value: '6.7-inch Super Retina XDR OLED' },
-      { key: 'Chip', value: 'A17 Pro with 6-core GPU' },
-      { key: 'Camera', value: '48MP Main, 12MP Ultra Wide, 12MP 5× Telephoto' },
-      { key: 'Battery', value: 'Up to 29 hours video playback' },
-      { key: 'Storage', value: '256GB' },
-      { key: 'OS', value: 'iOS 17' },
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "1.7 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
     ]
   },
   {
-    name: 'Samsung 55" 4K QLED Smart TV (QN55Q80C)',
-    slug: 'samsung-55-4k-qled-smart-tv',
-    description: 'Quantum HDR+ with Quantum Dot technology delivers rich, lifelike color. Neo Quantum Processor 4K upscales every content to 4K resolution.',
-    price: 79990, comparePrice: 109990, stock: 30, brand: 'Samsung',
-    rating: 4.5, reviewCount: 3241, isFeatured: true, categorySlug: 'electronics',
-    images: [
-      { url: 'https://images.unsplash.com/photo-1593784991095-a205069470b6?w=600', isPrimary: true, displayOrder: 0 },
-      { url: 'https://images.unsplash.com/photo-1461151304267-38535e596517?w=600', isPrimary: false, displayOrder: 1 },
+    "name": "Nexus Laptop Essential",
+    "slug": "electronics-laptop-1",
+    "description": "A fantastic Laptop for all your needs. Durable and long-lasting!",
+    "price": 3213,
+    "comparePrice": 4712,
+    "stock": 199,
+    "brand": "Nexus",
+    "rating": 4.5,
+    "reviewCount": 592,
+    "isFeatured": false,
+    "categorySlug": "electronics",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
     ],
-    specs: [
-      { key: 'Display Size', value: '55 Inches' },
-      { key: 'Resolution', value: '4K Ultra HD (3840 x 2160)' },
-      { key: 'Display Technology', value: 'QLED' },
-      { key: 'HDR', value: 'Quantum HDR+' },
-      { key: 'Smart TV', value: 'Yes, Tizen OS' },
-      { key: 'Connectivity', value: 'Wi-Fi, Bluetooth, HDMI x4, USB x3' },
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "2.0 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
     ]
   },
   {
-    name: 'boAt Airdopes 141 Bluetooth TWS Earbuds',
-    slug: 'boat-airdopes-141-tws-earbuds',
-    description: 'Up to 42H of Total Playback with 8mm drivers for massive audio, ENx Technology for crisp calls, and IPX4 resistance. Multipoint connectivity lets you pair with 2 devices simultaneously.',
-    price: 1299, comparePrice: 3990, stock: 200, brand: 'boAt',
-    rating: 4.2, reviewCount: 89234, isFeatured: true, categorySlug: 'electronics',
-    images: [
-      { url: 'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600', isPrimary: true, displayOrder: 0 },
-      { url: 'https://images.unsplash.com/photo-1606741965506-64f02cc43861?w=600', isPrimary: false, displayOrder: 1 },
+    "name": "Nexus Headphones Premium",
+    "slug": "electronics-headphones-2",
+    "description": "A fantastic Headphones for all your needs. Durable and long-lasting!",
+    "price": 4112,
+    "comparePrice": 4898,
+    "stock": 148,
+    "brand": "Nexus",
+    "rating": 4.7,
+    "reviewCount": 414,
+    "isFeatured": false,
+    "categorySlug": "electronics",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1611186871525-9b8f4ab07a20?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
     ],
-    specs: [
-      { key: 'Driver Size', value: '8mm' },
-      { key: 'Playback', value: 'Up to 42H total (6H + 36H case)' },
-      { key: 'Connectivity', value: 'Bluetooth v5.3' },
-      { key: 'Water Resistance', value: 'IPX4' },
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "2.7 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
     ]
   },
   {
-    name: 'Logitech MX Master 3S Wireless Mouse',
-    slug: 'logitech-mx-master-3s-wireless-mouse',
-    description: 'Ultra-precise 8K DPI sensor works on any surface. MagSpeed Electromagnetic scroll wheel. Nearly silent clicks. 70-day battery. Connect up to 3 devices.',
-    price: 9995, comparePrice: 12995, stock: 75, brand: 'Logitech',
-    rating: 4.7, reviewCount: 7821, isFeatured: false, categorySlug: 'electronics',
-    images: [
-      { url: 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=600', isPrimary: true, displayOrder: 0 },
+    "name": "Lumina Tablet Pro",
+    "slug": "electronics-tablet-3",
+    "description": "A fantastic Tablet for all your needs. Durable and long-lasting!",
+    "price": 3419,
+    "comparePrice": 4889,
+    "stock": 11,
+    "brand": "Lumina",
+    "rating": 4,
+    "reviewCount": 53,
+    "isFeatured": true,
+    "categorySlug": "electronics",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
     ],
-    specs: [
-      { key: 'Sensor', value: 'Darkfield 8000 DPI' },
-      { key: 'Connectivity', value: 'Bluetooth + Logi Bolt USB Receiver' },
-      { key: 'Battery', value: 'Up to 70 days' },
-      { key: 'OS Compatibility', value: 'Windows, macOS, Linux, Chrome OS' },
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "2.7 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
     ]
   },
   {
-    name: 'Kindle Paperwhite (16 GB) - Signature Edition',
-    slug: 'kindle-paperwhite-16gb-signature',
-    description: 'The thinnest, lightest Kindle Paperwhite ever — with a 7" glare-free display, 300 ppi, adjustable warm light, wireless charging, and up to 12 weeks of battery life.',
-    price: 16999, comparePrice: 19999, stock: 120, brand: 'Amazon',
-    rating: 4.6, reviewCount: 43210, isFeatured: true, categorySlug: 'electronics',
-    images: [
-      { url: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600', isPrimary: true, displayOrder: 0 },
+    "name": "Vanguard Smartwatch Classic",
+    "slug": "electronics-smartwatch-4",
+    "description": "A fantastic Smartwatch for all your needs. Durable and long-lasting!",
+    "price": 3306,
+    "comparePrice": 4997,
+    "stock": 89,
+    "brand": "Vanguard",
+    "rating": 3.6,
+    "reviewCount": 513,
+    "isFeatured": false,
+    "categorySlug": "electronics",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
     ],
-    specs: [
-      { key: 'Display', value: '7" 300 ppi glare-free' },
-      { key: 'Storage', value: '16 GB' },
-      { key: 'Battery', value: 'Up to 12 weeks' },
-      { key: 'Charging', value: 'Wireless + USB-C' },
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "3.6 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
     ]
   },
   {
-    name: 'Sony WH-1000XM5 Wireless Noise Cancelling Headphones',
-    slug: 'sony-wh1000xm5-noise-cancelling',
-    description: 'Industry-leading noise cancellation with 8 microphones and two processors. 30-hour battery. Multipoint connection. Crystal-clear hands-free calling.',
-    price: 26990, comparePrice: 34990, stock: 45, brand: 'Sony',
-    rating: 4.8, reviewCount: 15678, isFeatured: true, categorySlug: 'electronics',
-    images: [
-      { url: 'https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=600', isPrimary: true, displayOrder: 0 },
-      { url: 'https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=600', isPrimary: false, displayOrder: 1 },
+    "name": "Stratos Camera Essential",
+    "slug": "electronics-camera-5",
+    "description": "A fantastic Camera for all your needs. Durable and long-lasting!",
+    "price": 4401,
+    "comparePrice": 6214,
+    "stock": 152,
+    "brand": "Stratos",
+    "rating": 3.1,
+    "reviewCount": 388,
+    "isFeatured": false,
+    "categorySlug": "electronics",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
     ],
-    specs: [
-      { key: 'Noise Cancellation', value: 'Industry-leading ANC with 8 mics' },
-      { key: 'Battery Life', value: '30 hours' },
-      { key: 'Quick Charge', value: '3 min charge = 3 hours playback' },
-      { key: 'Connectivity', value: 'Bluetooth 5.2, Multipoint' },
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "4.1 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
     ]
   },
   {
-    name: 'Apple MacBook Air 15" M3 Chip (8GB RAM, 256GB SSD)',
-    slug: 'apple-macbook-air-15-m3',
-    description: 'MacBook Air 15" with M3 chip. Up to 18 hours battery. 15.3" Liquid Retina display. 1080p FaceTime HD camera. MagSafe charging. Two Thunderbolt 3 ports.',
-    price: 134900, comparePrice: 149900, stock: 25, brand: 'Apple',
-    rating: 4.8, reviewCount: 5432, isFeatured: true, categorySlug: 'electronics',
-    images: [
-      { url: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600', isPrimary: true, displayOrder: 0 },
-      { url: 'https://images.unsplash.com/photo-1611186871525-9b8f4ab07a20?w=600', isPrimary: false, displayOrder: 1 },
+    "name": "Echo Monitor Pro",
+    "slug": "electronics-monitor-6",
+    "description": "A fantastic Monitor for all your needs. Durable and long-lasting!",
+    "price": 4391,
+    "comparePrice": 4841,
+    "stock": 198,
+    "brand": "Echo",
+    "rating": 3,
+    "reviewCount": 622,
+    "isFeatured": true,
+    "categorySlug": "electronics",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
     ],
-    specs: [
-      { key: 'Chip', value: 'Apple M3 (8-core CPU, 10-core GPU)' },
-      { key: 'Memory', value: '8 GB' },
-      { key: 'Storage', value: '256 GB SSD' },
-      { key: 'Display', value: '15.3" Liquid Retina (2880 x 1864)' },
-      { key: 'Battery', value: 'Up to 18 hours' },
-    ]
-  },
-
-  // BOOKS
-  {
-    name: 'Atomic Habits by James Clear - Paperback',
-    slug: 'atomic-habits-james-clear',
-    description: 'No.1 New York Times bestseller. Tiny Changes, Remarkable Results. A revolutionary system to get 1 per cent better every day. Transform how you think about progress and success.',
-    price: 499, comparePrice: 699, stock: 500, brand: 'Penguin Random House',
-    rating: 4.8, reviewCount: 124567, isFeatured: true, categorySlug: 'books',
-    images: [
-      { url: 'https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=600', isPrimary: true, displayOrder: 0 },
-      { url: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600', isPrimary: false, displayOrder: 1 },
-    ],
-    specs: [
-      { key: 'Author', value: 'James Clear' },
-      { key: 'Publisher', value: 'Penguin Random House' },
-      { key: 'Pages', value: '320' },
-      { key: 'Language', value: 'English' },
-      { key: 'ISBN', value: '978-1847941831' },
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "3.2 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
     ]
   },
   {
-    name: 'The Psychology of Money by Morgan Housel',
-    slug: 'psychology-of-money-morgan-housel',
-    description: 'Timeless lessons on wealth, greed, and happiness. Doing well with money isn\'t necessarily about what you know. It\'s about how you behave with it.',
-    price: 399, comparePrice: 599, stock: 350, brand: 'Jaico Publishing',
-    rating: 4.7, reviewCount: 87342, isFeatured: true, categorySlug: 'books',
-    images: [
-      { url: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600', isPrimary: true, displayOrder: 0 },
+    "name": "Pinnacle Speakers Ultra",
+    "slug": "electronics-speakers-7",
+    "description": "A fantastic Speakers for all your needs. Durable and long-lasting!",
+    "price": 4685,
+    "comparePrice": 5809,
+    "stock": 66,
+    "brand": "Pinnacle",
+    "rating": 4,
+    "reviewCount": 661,
+    "isFeatured": true,
+    "categorySlug": "electronics",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
     ],
-    specs: [
-      { key: 'Author', value: 'Morgan Housel' },
-      { key: 'Publisher', value: 'Harriman House' },
-      { key: 'Pages', value: '256' },
-      { key: 'Language', value: 'English' },
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "1.6 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
     ]
   },
   {
-    name: 'Rich Dad Poor Dad by Robert T. Kiyosaki',
-    slug: 'rich-dad-poor-dad-kiyosaki',
-    description: 'What the rich teach their kids about money that the poor and middle class do not! The #1 personal finance book of all time.',
-    price: 350, comparePrice: 550, stock: 400, brand: 'Plata Publishing',
-    rating: 4.6, reviewCount: 201456, isFeatured: false, categorySlug: 'books',
-    images: [
-      { url: 'https://images.unsplash.com/photo-1592496431122-2349e0fbc666?w=600', isPrimary: true, displayOrder: 0 },
+    "name": "Pinnacle Keyboard Essential",
+    "slug": "electronics-keyboard-8",
+    "description": "A fantastic Keyboard for all your needs. Durable and long-lasting!",
+    "price": 4560,
+    "comparePrice": 5118,
+    "stock": 129,
+    "brand": "Pinnacle",
+    "rating": 4.1,
+    "reviewCount": 618,
+    "isFeatured": false,
+    "categorySlug": "electronics",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1526406915894-7bcd65510266?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
     ],
-    specs: [
-      { key: 'Author', value: 'Robert T. Kiyosaki' },
-      { key: 'Pages', value: '336' },
-      { key: 'Language', value: 'English' },
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "4.7 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
     ]
   },
   {
-    name: 'The Alchemist by Paulo Coelho',
-    slug: 'the-alchemist-paulo-coelho',
-    description: 'A mystical story of Santiago\'s journey to find treasure. A timeless fable about following your dreams. Over 65 million copies sold worldwide.',
-    price: 299, comparePrice: 399, stock: 600, brand: 'HarperOne',
-    rating: 4.7, reviewCount: 312890, isFeatured: false, categorySlug: 'books',
-    images: [
-      { url: 'https://images.unsplash.com/photo-1532012197267-da84d127e765?w=600', isPrimary: true, displayOrder: 0 },
+    "name": "Omni Mouse Ultra",
+    "slug": "electronics-mouse-9",
+    "description": "A fantastic Mouse for all your needs. Durable and long-lasting!",
+    "price": 3763,
+    "comparePrice": 4133,
+    "stock": 145,
+    "brand": "Omni",
+    "rating": 4.5,
+    "reviewCount": 108,
+    "isFeatured": false,
+    "categorySlug": "electronics",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
     ],
-    specs: [
-      { key: 'Author', value: 'Paulo Coelho' },
-      { key: 'Pages', value: '208' },
-      { key: 'Language', value: 'English' },
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "0.7 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
     ]
   },
   {
-    name: 'Zero to One by Peter Thiel',
-    slug: 'zero-to-one-peter-thiel',
-    description: 'Notes on Startups, or How to Build the Future. The next Bill Gates will not build an operating system. The next Larry Page or Sergey Brin won\'t make a search engine.',
-    price: 449, comparePrice: 649, stock: 280, brand: 'Currency',
-    rating: 4.5, reviewCount: 45231, isFeatured: false, categorySlug: 'books',
-    images: [
-      { url: 'https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=600', isPrimary: true, displayOrder: 0 },
+    "name": "Echo Router Standard",
+    "slug": "electronics-router-10",
+    "description": "A fantastic Router for all your needs. Durable and long-lasting!",
+    "price": 1218,
+    "comparePrice": 1863,
+    "stock": 102,
+    "brand": "Echo",
+    "rating": 3.4,
+    "reviewCount": 700,
+    "isFeatured": false,
+    "categorySlug": "electronics",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
     ],
-    specs: [
-      { key: 'Author', value: 'Peter Thiel with Blake Masters' },
-      { key: 'Pages', value: '224' },
-      { key: 'Language', value: 'English' },
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "1.4 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
     ]
   },
   {
-    name: 'Deep Work by Cal Newport',
-    slug: 'deep-work-cal-newport',
-    description: 'Rules for Focused Success in a Distracted World. The ability to perform deep work is becoming increasingly rare at exactly the same time it is becoming increasingly valuable.',
-    price: 399, comparePrice: 599, stock: 320, brand: 'Grand Central Publishing',
-    rating: 4.6, reviewCount: 56789, isFeatured: false, categorySlug: 'books',
-    images: [
-      { url: 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=600', isPrimary: true, displayOrder: 0 },
+    "name": "Nexus Drone Premium",
+    "slug": "electronics-drone-11",
+    "description": "A fantastic Drone for all your needs. Durable and long-lasting!",
+    "price": 1852,
+    "comparePrice": 2348,
+    "stock": 200,
+    "brand": "Nexus",
+    "rating": 4.5,
+    "reviewCount": 181,
+    "isFeatured": false,
+    "categorySlug": "electronics",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1611186871525-9b8f4ab07a20?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
     ],
-    specs: [
-      { key: 'Author', value: 'Cal Newport' },
-      { key: 'Pages', value: '304' },
-      { key: 'Language', value: 'English' },
-    ]
-  },
-
-  // CLOTHING
-  {
-    name: 'Levi\'s Men\'s 511 Slim Fit Jeans',
-    slug: 'levis-mens-511-slim-fit-jeans',
-    description: 'The classic slim through seat and thigh with a slim leg opening. Sits below waist. Advanced stretch fabric for all-day comfort.',
-    price: 2999, comparePrice: 4599, stock: 150, brand: "Levi's",
-    rating: 4.4, reviewCount: 34521, isFeatured: true, categorySlug: 'clothing',
-    images: [
-      { url: 'https://images.unsplash.com/photo-1542272604-787c3835535d?w=600', isPrimary: true, displayOrder: 0 },
-      { url: 'https://images.unsplash.com/photo-1582552938357-32b906df40cb?w=600', isPrimary: false, displayOrder: 1 },
-    ],
-    specs: [
-      { key: 'Fit', value: 'Slim' },
-      { key: 'Rise', value: 'Below waist' },
-      { key: 'Material', value: '72% Cotton, 17% Polyester, 11% Viscose' },
-      { key: 'Closure', value: 'Button fly' },
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "3.9 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
     ]
   },
   {
-    name: 'Peter England Men\'s Formal Shirt - Sky Blue',
-    slug: 'peter-england-formal-shirt-sky-blue',
-    description: 'Premium cotton formal shirt. Perfect for office wear. Wrinkle resistant finish. Regular fit. Available in M, L, XL, XXL.',
-    price: 879, comparePrice: 1499, stock: 200, brand: 'Peter England',
-    rating: 4.3, reviewCount: 12340, isFeatured: false, categorySlug: 'clothing',
-    images: [
-      { url: 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600', isPrimary: true, displayOrder: 0 },
+    "name": "Echo TV Advanced",
+    "slug": "electronics-tv-12",
+    "description": "A fantastic TV for all your needs. Durable and long-lasting!",
+    "price": 1125,
+    "comparePrice": 2993,
+    "stock": 40,
+    "brand": "Echo",
+    "rating": 3.3,
+    "reviewCount": 89,
+    "isFeatured": true,
+    "categorySlug": "electronics",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1611186871525-9b8f4ab07a20?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
     ],
-    specs: [
-      { key: 'Fit', value: 'Regular' },
-      { key: 'Material', value: '100% Cotton' },
-      { key: 'Pattern', value: 'Solid' },
-      { key: 'Neck', value: 'Spread Collar' },
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "4.7 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
     ]
   },
   {
-    name: 'Nike Air Force 1 \'07 Sneakers - White',
-    slug: 'nike-air-force-1-07-white',
-    description: 'The radiance lives on in the Nike Air Force 1 \'07, a basketball legacy remastered in the details that count. Featured with crisp leather and Nike Air cushioning.',
-    price: 7495, comparePrice: 9495, stock: 80, brand: 'Nike',
-    rating: 4.6, reviewCount: 56789, isFeatured: true, categorySlug: 'clothing',
-    images: [
-      { url: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600', isPrimary: true, displayOrder: 0 },
-      { url: 'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=600', isPrimary: false, displayOrder: 1 },
+    "name": "Apex Earbuds Premium",
+    "slug": "electronics-earbuds-13",
+    "description": "A fantastic Earbuds for all your needs. Durable and long-lasting!",
+    "price": 2299,
+    "comparePrice": 3275,
+    "stock": 81,
+    "brand": "Apex",
+    "rating": 4.6,
+    "reviewCount": 77,
+    "isFeatured": true,
+    "categorySlug": "electronics",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1526406915894-7bcd65510266?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
     ],
-    specs: [
-      { key: 'Sole', value: 'Rubber' },
-      { key: 'Closure', value: 'Lace-up' },
-      { key: 'Upper Material', value: 'Leather' },
-      { key: 'Toe Style', value: 'Round' },
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "4.2 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
     ]
   },
   {
-    name: 'H&M Women\'s Basic Crewneck T-Shirt (Pack of 2)',
-    slug: 'hm-womens-basic-crewneck-tshirt-2pack',
-    description: 'Soft jersey top in a straight cut with a round neckline and short sleeves. Made from sustainable cotton. Pack of 2 in assorted colours.',
-    price: 799, comparePrice: 1299, stock: 300, brand: 'H&M',
-    rating: 4.2, reviewCount: 23450, isFeatured: false, categorySlug: 'clothing',
-    images: [
-      { url: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600', isPrimary: true, displayOrder: 0 },
+    "name": "Nexus Microphone Premium",
+    "slug": "electronics-microphone-14",
+    "description": "A fantastic Microphone for all your needs. Durable and long-lasting!",
+    "price": 972,
+    "comparePrice": 1667,
+    "stock": 102,
+    "brand": "Nexus",
+    "rating": 3.5,
+    "reviewCount": 434,
+    "isFeatured": false,
+    "categorySlug": "electronics",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1611186871525-9b8f4ab07a20?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
     ],
-    specs: [
-      { key: 'Composition', value: '100% Organic Cotton' },
-      { key: 'Fit', value: 'Regular' },
-      { key: 'Neckline', value: 'Round' },
-      { key: 'Pack', value: '2' },
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "0.8 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
     ]
   },
   {
-    name: 'UCB Men\'s Hooded Sweatshirt',
-    slug: 'ucb-mens-hooded-sweatshirt',
-    description: 'Cozy fleece-lined hoodie with kangaroo pocket. Ribbed cuffs and waistband for a comfortable fit. Ideal for casual outings and weekend wear.',
-    price: 1699, comparePrice: 2599, stock: 120, brand: 'United Colors of Benetton',
-    rating: 4.3, reviewCount: 8901, isFeatured: false, categorySlug: 'clothing',
-    images: [
-      { url: 'https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=600', isPrimary: true, displayOrder: 0 },
+    "name": "Nexus Charger Essential",
+    "slug": "electronics-charger-15",
+    "description": "A fantastic Charger for all your needs. Durable and long-lasting!",
+    "price": 4828,
+    "comparePrice": 6091,
+    "stock": 125,
+    "brand": "Nexus",
+    "rating": 3.2,
+    "reviewCount": 1000,
+    "isFeatured": true,
+    "categorySlug": "electronics",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
     ],
-    specs: [
-      { key: 'Material', value: '80% Cotton, 20% Polyester fleece' },
-      { key: 'Closure', value: 'Pullover' },
-      { key: 'Features', value: 'Kangaroo pocket, Drawstring hood' },
-    ]
-  },
-
-  // HOME & KITCHEN
-  {
-    name: 'Instant Pot Duo 7-in-1 Electric Pressure Cooker (5.7L)',
-    slug: 'instant-pot-duo-7in1-pressure-cooker',
-    description: 'Replace 7 kitchen appliances: pressure cooker, slow cooker, rice cooker, steamer, sauté pan, yogurt maker, and food warmer. 14 one-touch cooking programs.',
-    price: 8999, comparePrice: 12999, stock: 60, brand: 'Instant Pot',
-    rating: 4.6, reviewCount: 45678, isFeatured: true, categorySlug: 'home-kitchen',
-    images: [
-      { url: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600', isPrimary: true, displayOrder: 0 },
-    ],
-    specs: [
-      { key: 'Capacity', value: '5.7 Litres' },
-      { key: 'Functions', value: '7-in-1 multifunctional' },
-      { key: 'Programs', value: '14 smart one-touch' },
-      { key: 'Material', value: 'Stainless steel inner pot' },
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "3.8 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
     ]
   },
   {
-    name: 'Philips HD3770/00 Electric Rice Cooker (1.8 L)',
-    slug: 'philips-hd3770-rice-cooker',
-    description: 'Cook perfect rice every time with 15 preset cooking menus. Fuzzy logic technology automatically adjusts cooking time and pressure. 1.8L capacity for up to 10 cups of cooked rice.',
-    price: 3499, comparePrice: 5500, stock: 90, brand: 'Philips',
-    rating: 4.4, reviewCount: 18923, isFeatured: false, categorySlug: 'home-kitchen',
-    images: [
-      { url: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600', isPrimary: true, displayOrder: 0 },
+    "name": "Pinnacle Power Bank Essential",
+    "slug": "electronics-power-bank-16",
+    "description": "A fantastic Power Bank for all your needs. Durable and long-lasting!",
+    "price": 3895,
+    "comparePrice": 5301,
+    "stock": 57,
+    "brand": "Pinnacle",
+    "rating": 4.6,
+    "reviewCount": 75,
+    "isFeatured": true,
+    "categorySlug": "electronics",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
     ],
-    specs: [
-      { key: 'Capacity', value: '1.8 L' },
-      { key: 'Power', value: '860 W' },
-      { key: 'Menus', value: '15 preset cooking menus' },
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "2.4 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
     ]
   },
   {
-    name: 'Dyson V15 Detect Absolute Cordless Vacuum Cleaner',
-    slug: 'dyson-v15-detect-cordless-vacuum',
-    description: 'Laser detects invisible dust. HEPA filtration captures particles as small as 0.1 microns. 60 minutes runtime. LCD screen shows real-time particle count.',
-    price: 62900, comparePrice: 79900, stock: 20, brand: 'Dyson',
-    rating: 4.7, reviewCount: 4532, isFeatured: true, categorySlug: 'home-kitchen',
-    images: [
-      { url: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600', isPrimary: true, displayOrder: 0 },
+    "name": "Zenith SSD Premium",
+    "slug": "electronics-ssd-17",
+    "description": "A fantastic SSD for all your needs. Durable and long-lasting!",
+    "price": 3079,
+    "comparePrice": 3567,
+    "stock": 161,
+    "brand": "Zenith",
+    "rating": 4.6,
+    "reviewCount": 315,
+    "isFeatured": false,
+    "categorySlug": "electronics",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
     ],
-    specs: [
-      { key: 'Runtime', value: 'Up to 60 minutes' },
-      { key: 'Filtration', value: 'HEPA' },
-      { key: 'Dustbin', value: '0.76L capacity' },
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "0.9 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
     ]
   },
   {
-    name: 'IKEA KALLAX Shelf Unit (77x77cm) - White',
-    slug: 'ikea-kallax-shelf-unit-white',
-    description: 'Combines function with style in any room. Can be placed vertically or horizontally and used as a room divider. Four compartments for books, baskets, and boxes.',
-    price: 5990, comparePrice: 7990, stock: 40, brand: 'IKEA',
-    rating: 4.5, reviewCount: 23109, isFeatured: false, categorySlug: 'home-kitchen',
-    images: [
-      { url: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600', isPrimary: true, displayOrder: 0 },
+    "name": "Zenith RAM Classic",
+    "slug": "electronics-ram-18",
+    "description": "A fantastic RAM for all your needs. Durable and long-lasting!",
+    "price": 4690,
+    "comparePrice": 6537,
+    "stock": 106,
+    "brand": "Zenith",
+    "rating": 3.1,
+    "reviewCount": 862,
+    "isFeatured": false,
+    "categorySlug": "electronics",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
     ],
-    specs: [
-      { key: 'Dimensions', value: '77 x 77 cm' },
-      { key: 'Material', value: 'Particle board' },
-      { key: 'Compartments', value: '4' },
-      { key: 'Max Load', value: '13 kg per compartment' },
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "4.0 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
     ]
   },
   {
-    name: 'Wonderchef Crimson Edge Knife Set (5-Piece)',
-    slug: 'wonderchef-crimson-edge-knife-set',
-    description: 'Forged from high-carbon stainless steel. Precision edge for effortless cutting and slicing. Ergonomic handle design. Acrylic knife block included.',
-    price: 1899, comparePrice: 3499, stock: 110, brand: 'Wonderchef',
-    rating: 4.3, reviewCount: 12034, isFeatured: false, categorySlug: 'home-kitchen',
-    images: [
-      { url: 'https://images.unsplash.com/photo-1593618998160-e34014e67546?w=600', isPrimary: true, displayOrder: 0 },
+    "name": "Lumina Graphics Card Elite",
+    "slug": "electronics-graphics-card-19",
+    "description": "A fantastic Graphics Card for all your needs. Durable and long-lasting!",
+    "price": 1013,
+    "comparePrice": 2529,
+    "stock": 192,
+    "brand": "Lumina",
+    "rating": 4.5,
+    "reviewCount": 991,
+    "isFeatured": false,
+    "categorySlug": "electronics",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1611186871525-9b8f4ab07a20?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
     ],
-    specs: [
-      { key: 'Pieces', value: '5 (Chef knife, bread knife, carving knife, utility knife, paring knife)' },
-      { key: 'Material', value: 'High-carbon stainless steel' },
-      { key: 'Handle', value: 'ABS ergonomic' },
-    ]
-  },
-
-  // SPORTS
-  {
-    name: 'Cosco Fury Football - Size 5',
-    slug: 'cosco-fury-football-size-5',
-    description: 'AFC approved match ball. Hand stitched with premium quality PU material. Butyl bladder for superior air retention. Suitable for all weather conditions.',
-    price: 649, comparePrice: 999, stock: 200, brand: 'Cosco',
-    rating: 4.3, reviewCount: 11234, isFeatured: false, categorySlug: 'sports',
-    images: [
-      { url: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600', isPrimary: true, displayOrder: 0 },
-    ],
-    specs: [
-      { key: 'Size', value: '5' },
-      { key: 'Material', value: 'PU' },
-      { key: 'Bladder', value: 'Butyl' },
-    ]
-  },
-  {
-    name: 'Boldfit Pro Resistance Bands Set (5 Pack)',
-    slug: 'boldfit-resistance-bands-set',
-    description: 'Set of 5 resistance loop bands for home workouts, physical therapy, yoga, and stretching. Made from natural latex for durability. Light to Extra Heavy resistance levels.',
-    price: 499, comparePrice: 999, stock: 350, brand: 'Boldfit',
-    rating: 4.4, reviewCount: 45678, isFeatured: true, categorySlug: 'sports',
-    images: [
-      { url: 'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=600', isPrimary: true, displayOrder: 0 },
-    ],
-    specs: [
-      { key: 'Material', value: 'Natural latex' },
-      { key: 'Pieces', value: '5 bands + carry bag' },
-      { key: 'Resistance Levels', value: 'X-Light, Light, Medium, Heavy, X-Heavy' },
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "2.7 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
     ]
   },
   {
-    name: 'Nivia Storm Football Shoes - Black/White',
-    slug: 'nivia-storm-football-shoes',
-    description: 'Synthetic leather upper for durability and ball control. Moulded studs for grip on firm ground. EVA insole for cushioning. Lace-up closure.',
-    price: 1299, comparePrice: 2499, stock: 80, brand: 'Nivia',
-    rating: 4.2, reviewCount: 7892, isFeatured: false, categorySlug: 'sports',
-    images: [
-      { url: 'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=600', isPrimary: true, displayOrder: 0 },
+    "name": "Vanguard MicroSD Classic",
+    "slug": "electronics-microsd-20",
+    "description": "A fantastic MicroSD for all your needs. Durable and long-lasting!",
+    "price": 1854,
+    "comparePrice": 2710,
+    "stock": 16,
+    "brand": "Vanguard",
+    "rating": 4,
+    "reviewCount": 623,
+    "isFeatured": true,
+    "categorySlug": "electronics",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
     ],
-    specs: [
-      { key: 'Upper', value: 'Synthetic Leather' },
-      { key: 'Stud', value: 'Moulded' },
-      { key: 'Surface', value: 'Firm Ground' },
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "1.2 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
     ]
   },
   {
-    name: 'Strauss Adjustable Dumbbell Set (10 kg x 2)',
-    slug: 'strauss-adjustable-dumbbell-set-20kg',
-    description: 'Adjustable dumbbell set from 2.5 kg to 10 kg each. Cast iron weights with chrome-plated handles. Includes 6 weight plates + 2 spinlock bars.',
-    price: 2299, comparePrice: 3999, stock: 60, brand: 'Strauss',
-    rating: 4.5, reviewCount: 19023, isFeatured: true, categorySlug: 'sports',
-    images: [
-      { url: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600', isPrimary: true, displayOrder: 0 },
+    "name": "Pinnacle Webcam Advanced",
+    "slug": "electronics-webcam-21",
+    "description": "A fantastic Webcam for all your needs. Durable and long-lasting!",
+    "price": 4745,
+    "comparePrice": 5177,
+    "stock": 184,
+    "brand": "Pinnacle",
+    "rating": 3.4,
+    "reviewCount": 286,
+    "isFeatured": false,
+    "categorySlug": "electronics",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1526406915894-7bcd65510266?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
     ],
-    specs: [
-      { key: 'Total Weight', value: '20 kg (10 kg x 2)' },
-      { key: 'Material', value: 'Cast iron + Chrome-plated handle' },
-      { key: 'Adjustable', value: 'Yes, spinlock plates' },
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "3.3 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
     ]
   },
   {
-    name: 'Yonex Voltric Z-Force II Badminton Racket',
-    slug: 'yonex-voltric-zforce-2-badminton',
-    description: 'Endorsed by top world players. Tri-Voltage System with heavier head creates devastating smash speed. Extra-thin shaft delivers a powerful smash at a minimal weight.',
-    price: 6999, comparePrice: 9999, stock: 35, brand: 'Yonex',
-    rating: 4.7, reviewCount: 3456, isFeatured: false, categorySlug: 'sports',
-    images: [
-      { url: 'https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=600', isPrimary: true, displayOrder: 0 },
+    "name": "Echo Game Console Advanced",
+    "slug": "electronics-game-console-22",
+    "description": "A fantastic Game Console for all your needs. Durable and long-lasting!",
+    "price": 5018,
+    "comparePrice": 6494,
+    "stock": 105,
+    "brand": "Echo",
+    "rating": 5,
+    "reviewCount": 818,
+    "isFeatured": true,
+    "categorySlug": "electronics",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
     ],
-    specs: [
-      { key: 'Weight', value: 'U (88-92g)' },
-      { key: 'Balance', value: 'Head Heavy' },
-      { key: 'Shaft', value: 'Extra Slim' },
-      { key: 'Material', value: 'HM Graphite' },
-    ]
-  },
-
-  // BEAUTY
-  {
-    name: 'Lakme 9 to 5 Mousse Matte Lipstick - Burgundy Lust',
-    slug: 'lakme-9to5-mousse-matte-lipstick',
-    description: 'Matte finish lipstick with comfortable 12-hour stay. Lightweight mousse texture melts onto lips. Transfer-proof formula. Enriched with Vitamin E.',
-    price: 349, comparePrice: 499, stock: 250, brand: 'Lakme',
-    rating: 4.3, reviewCount: 34521, isFeatured: true, categorySlug: 'beauty',
-    images: [
-      { url: 'https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=600', isPrimary: true, displayOrder: 0 },
-    ],
-    specs: [
-      { key: 'Finish', value: 'Matte' },
-      { key: 'Stay', value: 'Up to 12 hours' },
-      { key: 'Size', value: '3.6 g' },
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "3.7 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
     ]
   },
   {
-    name: 'Neutrogena Hydro Boost Water Gel Moisturizer (50g)',
-    slug: 'neutrogena-hydro-boost-water-gel',
-    description: 'Breakthrough water gel formula absorbs instantly and quenches skin. Hyaluronic acid retains up to 1000x its weight in water. Oil-free, non-comedogenic.',
-    price: 1099, comparePrice: 1499, stock: 180, brand: 'Neutrogena',
-    rating: 4.5, reviewCount: 23456, isFeatured: true, categorySlug: 'beauty',
-    images: [
-      { url: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600', isPrimary: true, displayOrder: 0 },
+    "name": "Omni Projector Standard",
+    "slug": "electronics-projector-23",
+    "description": "A fantastic Projector for all your needs. Durable and long-lasting!",
+    "price": 1797,
+    "comparePrice": 2235,
+    "stock": 198,
+    "brand": "Omni",
+    "rating": 3.5,
+    "reviewCount": 665,
+    "isFeatured": false,
+    "categorySlug": "electronics",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
     ],
-    specs: [
-      { key: 'Skin Type', value: 'All types, especially combination/oily' },
-      { key: 'Key Ingredient', value: 'Hyaluronic Acid' },
-      { key: 'Weight', value: '50 g' },
-      { key: 'Non-comedogenic', value: 'Yes' },
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "2.4 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
     ]
   },
   {
-    name: 'L\'Oreal Paris 6-Oil Nourish Shampoo (650ml)',
-    slug: 'loreal-paris-6oil-nourish-shampoo',
-    description: 'Infused with 6 precious oils: Argan, Almond, Camellia, Rose, Sunflower, and Jojoba. Makes hair 5× stronger. Tames frizz and adds shine.',
-    price: 449, comparePrice: 649, stock: 220, brand: "L'Oreal Paris",
-    rating: 4.4, reviewCount: 67234, isFeatured: false, categorySlug: 'beauty',
-    images: [
-      { url: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600', isPrimary: true, displayOrder: 0 },
+    "name": "Omni Smart Home Hub Ultra",
+    "slug": "electronics-smart-home-hub-24",
+    "description": "A fantastic Smart Home Hub for all your needs. Durable and long-lasting!",
+    "price": 2961,
+    "comparePrice": 3155,
+    "stock": 160,
+    "brand": "Omni",
+    "rating": 4.6,
+    "reviewCount": 346,
+    "isFeatured": false,
+    "categorySlug": "electronics",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
     ],
-    specs: [
-      { key: 'Volume', value: '650 ml' },
-      { key: 'Hair Type', value: 'Dry, damaged, frizzy' },
-      { key: 'Key Ingredients', value: '6 precious oils' },
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "4.0 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
     ]
   },
   {
-    name: 'Maybelline New York Fit Me Matte+Poreless Foundation',
-    slug: 'maybelline-fitme-matte-poreless-foundation',
-    description: 'Fits skin tone and texture. Real-skin matte finish. Controls shine and minimizes pores. Up to 24-hour wear. Available in 11 shades.',
-    price: 449, comparePrice: 699, stock: 200, brand: 'Maybelline New York',
-    rating: 4.4, reviewCount: 54321, isFeatured: true, categorySlug: 'beauty',
-    images: [
-      { url: 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=600', isPrimary: true, displayOrder: 0 },
+    "name": "Lumina Mystery Novel Classic",
+    "slug": "books-mystery-novel-0",
+    "description": "A fantastic Mystery Novel for all your needs. Durable and long-lasting!",
+    "price": 1971,
+    "comparePrice": 2921,
+    "stock": 90,
+    "brand": "Lumina",
+    "rating": 4.1,
+    "reviewCount": 962,
+    "isFeatured": false,
+    "categorySlug": "books",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1456953180633-b6d3b40ba20a?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
     ],
-    specs: [
-      { key: 'Finish', value: 'Matte' },
-      { key: 'Coverage', value: 'Medium to Full' },
-      { key: 'Volume', value: '30 ml' },
-      { key: 'Wear', value: 'Up to 24 hours' },
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "0.8 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
     ]
   },
   {
-    name: 'Biotique Bio Honey Gel Face Wash (100ml)',
-    slug: 'biotique-bio-honey-gel-face-wash',
-    description: 'Ayurvedic certified organic formula blended with honey, banana leaf and pure mountain water. Gently cleanses to reveal clear, smooth, younger-looking skin.',
-    price: 165, comparePrice: 249, stock: 400, brand: 'Biotique',
-    rating: 4.3, reviewCount: 88123, isFeatured: false, categorySlug: 'beauty',
-    images: [
-      { url: 'https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=600', isPrimary: true, displayOrder: 0 },
+    "name": "Vanguard Sci-Fi Book Essential",
+    "slug": "books-sci-fi-book-1",
+    "description": "A fantastic Sci-Fi Book for all your needs. Durable and long-lasting!",
+    "price": 3906,
+    "comparePrice": 5318,
+    "stock": 141,
+    "brand": "Vanguard",
+    "rating": 3.7,
+    "reviewCount": 350,
+    "isFeatured": false,
+    "categorySlug": "books",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
     ],
-    specs: [
-      { key: 'Volume', value: '100 ml' },
-      { key: 'Skin Type', value: 'All skin types' },
-      { key: 'Certification', value: 'Ayurvedic certified organic' },
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "2.3 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
     ]
   },
   {
-    name: 'WOW Skin Science Apple Cider Vinegar Shampoo (300ml)',
-    slug: 'wow-apple-cider-vinegar-shampoo',
-    description: 'Restores pH balance of scalp & hair. Removes build-up of oil, dry skin flakes, impurities. DHT blocker contains Nettle Leaf & Saw Palmetto. Sulfate-free, paraben-free.',
-    price: 349, comparePrice: 599, stock: 260, brand: 'WOW Skin Science',
-    rating: 4.2, reviewCount: 123456, isFeatured: false, categorySlug: 'beauty',
-    images: [
-      { url: 'https://images.unsplash.com/photo-1583947581924-860bda6a26df?w=600', isPrimary: true, displayOrder: 0 },
+    "name": "Nexus Fantasy Epic Advanced",
+    "slug": "books-fantasy-epic-2",
+    "description": "A fantastic Fantasy Epic for all your needs. Durable and long-lasting!",
+    "price": 2047,
+    "comparePrice": 2754,
+    "stock": 88,
+    "brand": "Nexus",
+    "rating": 3.2,
+    "reviewCount": 256,
+    "isFeatured": true,
+    "categorySlug": "books",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
     ],
-    specs: [
-      { key: 'Volume', value: '300 ml' },
-      { key: 'Sulfate Free', value: 'Yes' },
-      { key: 'Paraben Free', value: 'Yes' },
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "0.3 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
     ]
   },
+  {
+    "name": "Echo Self-Help Guide Pro",
+    "slug": "books-self-help-guide-3",
+    "description": "A fantastic Self-Help Guide for all your needs. Durable and long-lasting!",
+    "price": 3010,
+    "comparePrice": 4343,
+    "stock": 88,
+    "brand": "Echo",
+    "rating": 3.3,
+    "reviewCount": 525,
+    "isFeatured": true,
+    "categorySlug": "books",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "1.9 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Echo Biography Pro",
+    "slug": "books-biography-4",
+    "description": "A fantastic Biography for all your needs. Durable and long-lasting!",
+    "price": 4383,
+    "comparePrice": 5020,
+    "stock": 82,
+    "brand": "Echo",
+    "rating": 3.1,
+    "reviewCount": 333,
+    "isFeatured": false,
+    "categorySlug": "books",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "3.6 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Stratos Cookbook Ultra",
+    "slug": "books-cookbook-5",
+    "description": "A fantastic Cookbook for all your needs. Durable and long-lasting!",
+    "price": 851,
+    "comparePrice": 2535,
+    "stock": 40,
+    "brand": "Stratos",
+    "rating": 3.3,
+    "reviewCount": 720,
+    "isFeatured": false,
+    "categorySlug": "books",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "1.3 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Zenith History Text Elite",
+    "slug": "books-history-text-6",
+    "description": "A fantastic History Text for all your needs. Durable and long-lasting!",
+    "price": 4020,
+    "comparePrice": 4485,
+    "stock": 191,
+    "brand": "Zenith",
+    "rating": 3.8,
+    "reviewCount": 856,
+    "isFeatured": false,
+    "categorySlug": "books",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "4.8 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Stratos Poetry Collection Ultra",
+    "slug": "books-poetry-collection-7",
+    "description": "A fantastic Poetry Collection for all your needs. Durable and long-lasting!",
+    "price": 4992,
+    "comparePrice": 6867,
+    "stock": 116,
+    "brand": "Stratos",
+    "rating": 4.7,
+    "reviewCount": 982,
+    "isFeatured": false,
+    "categorySlug": "books",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "4.9 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Vanguard Thriller Standard",
+    "slug": "books-thriller-8",
+    "description": "A fantastic Thriller for all your needs. Durable and long-lasting!",
+    "price": 248,
+    "comparePrice": 871,
+    "stock": 139,
+    "brand": "Vanguard",
+    "rating": 4.8,
+    "reviewCount": 215,
+    "isFeatured": true,
+    "categorySlug": "books",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "4.2 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Apex Romance Novel Elite",
+    "slug": "books-romance-novel-9",
+    "description": "A fantastic Romance Novel for all your needs. Durable and long-lasting!",
+    "price": 4353,
+    "comparePrice": 6365,
+    "stock": 122,
+    "brand": "Apex",
+    "rating": 4.5,
+    "reviewCount": 767,
+    "isFeatured": false,
+    "categorySlug": "books",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "1.0 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Apex Comic Book Premium",
+    "slug": "books-comic-book-10",
+    "description": "A fantastic Comic Book for all your needs. Durable and long-lasting!",
+    "price": 2476,
+    "comparePrice": 2636,
+    "stock": 81,
+    "brand": "Apex",
+    "rating": 4,
+    "reviewCount": 845,
+    "isFeatured": false,
+    "categorySlug": "books",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "3.3 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Omni Manga Pro",
+    "slug": "books-manga-11",
+    "description": "A fantastic Manga for all your needs. Durable and long-lasting!",
+    "price": 3547,
+    "comparePrice": 4126,
+    "stock": 41,
+    "brand": "Omni",
+    "rating": 4.1,
+    "reviewCount": 342,
+    "isFeatured": false,
+    "categorySlug": "books",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "2.6 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Lumina Dictionary Pro",
+    "slug": "books-dictionary-12",
+    "description": "A fantastic Dictionary for all your needs. Durable and long-lasting!",
+    "price": 2999,
+    "comparePrice": 3501,
+    "stock": 77,
+    "brand": "Lumina",
+    "rating": 3.7,
+    "reviewCount": 400,
+    "isFeatured": true,
+    "categorySlug": "books",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "4.3 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Pinnacle Atlas Premium",
+    "slug": "books-atlas-13",
+    "description": "A fantastic Atlas for all your needs. Durable and long-lasting!",
+    "price": 2238,
+    "comparePrice": 2707,
+    "stock": 106,
+    "brand": "Pinnacle",
+    "rating": 3.9,
+    "reviewCount": 28,
+    "isFeatured": false,
+    "categorySlug": "books",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "0.8 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Lumina Encyclopedia Ultra",
+    "slug": "books-encyclopedia-14",
+    "description": "A fantastic Encyclopedia for all your needs. Durable and long-lasting!",
+    "price": 1703,
+    "comparePrice": 2469,
+    "stock": 162,
+    "brand": "Lumina",
+    "rating": 3.1,
+    "reviewCount": 764,
+    "isFeatured": false,
+    "categorySlug": "books",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "2.9 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Nexus Children's Book Standard",
+    "slug": "books-children-s-book-15",
+    "description": "A fantastic Children's Book for all your needs. Durable and long-lasting!",
+    "price": 2728,
+    "comparePrice": 4763,
+    "stock": 105,
+    "brand": "Nexus",
+    "rating": 3.7,
+    "reviewCount": 743,
+    "isFeatured": false,
+    "categorySlug": "books",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "3.1 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Lumina Business Guide Pro",
+    "slug": "books-business-guide-16",
+    "description": "A fantastic Business Guide for all your needs. Durable and long-lasting!",
+    "price": 2322,
+    "comparePrice": 2501,
+    "stock": 85,
+    "brand": "Lumina",
+    "rating": 3.8,
+    "reviewCount": 665,
+    "isFeatured": false,
+    "categorySlug": "books",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1456953180633-b6d3b40ba20a?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "0.5 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Pinnacle Programming Book Essential",
+    "slug": "books-programming-book-17",
+    "description": "A fantastic Programming Book for all your needs. Durable and long-lasting!",
+    "price": 747,
+    "comparePrice": 1566,
+    "stock": 169,
+    "brand": "Pinnacle",
+    "rating": 4.3,
+    "reviewCount": 426,
+    "isFeatured": false,
+    "categorySlug": "books",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "1.4 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Echo Design Manual Essential",
+    "slug": "books-design-manual-18",
+    "description": "A fantastic Design Manual for all your needs. Durable and long-lasting!",
+    "price": 3218,
+    "comparePrice": 5224,
+    "stock": 141,
+    "brand": "Echo",
+    "rating": 3.4,
+    "reviewCount": 905,
+    "isFeatured": false,
+    "categorySlug": "books",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "1.3 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Omni Art Book Elite",
+    "slug": "books-art-book-19",
+    "description": "A fantastic Art Book for all your needs. Durable and long-lasting!",
+    "price": 1710,
+    "comparePrice": 1953,
+    "stock": 76,
+    "brand": "Omni",
+    "rating": 4.2,
+    "reviewCount": 541,
+    "isFeatured": true,
+    "categorySlug": "books",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "1.4 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Omni Travel Guide Ultra",
+    "slug": "books-travel-guide-20",
+    "description": "A fantastic Travel Guide for all your needs. Durable and long-lasting!",
+    "price": 917,
+    "comparePrice": 1647,
+    "stock": 61,
+    "brand": "Omni",
+    "rating": 3,
+    "reviewCount": 363,
+    "isFeatured": false,
+    "categorySlug": "books",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1456953180633-b6d3b40ba20a?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "0.1 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Omni Philosophy Text Advanced",
+    "slug": "books-philosophy-text-21",
+    "description": "A fantastic Philosophy Text for all your needs. Durable and long-lasting!",
+    "price": 4374,
+    "comparePrice": 4836,
+    "stock": 208,
+    "brand": "Omni",
+    "rating": 4.9,
+    "reviewCount": 595,
+    "isFeatured": true,
+    "categorySlug": "books",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "2.3 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Stratos Religion Book Essential",
+    "slug": "books-religion-book-22",
+    "description": "A fantastic Religion Book for all your needs. Durable and long-lasting!",
+    "price": 3328,
+    "comparePrice": 4675,
+    "stock": 55,
+    "brand": "Stratos",
+    "rating": 3.4,
+    "reviewCount": 346,
+    "isFeatured": false,
+    "categorySlug": "books",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1456953180633-b6d3b40ba20a?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "3.0 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Zenith Science Journal Pro",
+    "slug": "books-science-journal-23",
+    "description": "A fantastic Science Journal for all your needs. Durable and long-lasting!",
+    "price": 4184,
+    "comparePrice": 4977,
+    "stock": 128,
+    "brand": "Zenith",
+    "rating": 3.2,
+    "reviewCount": 14,
+    "isFeatured": false,
+    "categorySlug": "books",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "0.8 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Zenith Math Textbook Ultra",
+    "slug": "books-math-textbook-24",
+    "description": "A fantastic Math Textbook for all your needs. Durable and long-lasting!",
+    "price": 3497,
+    "comparePrice": 4418,
+    "stock": 66,
+    "brand": "Zenith",
+    "rating": 4.1,
+    "reviewCount": 396,
+    "isFeatured": false,
+    "categorySlug": "books",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "2.4 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Apex T-Shirt Standard",
+    "slug": "clothing-t-shirt-0",
+    "description": "A fantastic T-Shirt for all your needs. Durable and long-lasting!",
+    "price": 3331,
+    "comparePrice": 4817,
+    "stock": 188,
+    "brand": "Apex",
+    "rating": 3.2,
+    "reviewCount": 437,
+    "isFeatured": false,
+    "categorySlug": "clothing",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "3.2 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Apex Jeans Pro",
+    "slug": "clothing-jeans-1",
+    "description": "A fantastic Jeans for all your needs. Durable and long-lasting!",
+    "price": 1068,
+    "comparePrice": 2816,
+    "stock": 36,
+    "brand": "Apex",
+    "rating": 3.5,
+    "reviewCount": 591,
+    "isFeatured": false,
+    "categorySlug": "clothing",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1503342452485-86b7f54527ce?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "1.1 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Echo Jacket Classic",
+    "slug": "clothing-jacket-2",
+    "description": "A fantastic Jacket for all your needs. Durable and long-lasting!",
+    "price": 677,
+    "comparePrice": 1837,
+    "stock": 180,
+    "brand": "Echo",
+    "rating": 4.2,
+    "reviewCount": 367,
+    "isFeatured": false,
+    "categorySlug": "clothing",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1489987705022-dcfbf55ee988?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "4.9 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Vanguard Sweater Ultra",
+    "slug": "clothing-sweater-3",
+    "description": "A fantastic Sweater for all your needs. Durable and long-lasting!",
+    "price": 2224,
+    "comparePrice": 3253,
+    "stock": 173,
+    "brand": "Vanguard",
+    "rating": 3.9,
+    "reviewCount": 113,
+    "isFeatured": true,
+    "categorySlug": "clothing",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "5.0 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Stratos Dress Pro",
+    "slug": "clothing-dress-4",
+    "description": "A fantastic Dress for all your needs. Durable and long-lasting!",
+    "price": 1527,
+    "comparePrice": 2442,
+    "stock": 58,
+    "brand": "Stratos",
+    "rating": 4.6,
+    "reviewCount": 14,
+    "isFeatured": false,
+    "categorySlug": "clothing",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "1.0 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Vanguard Skirt Elite",
+    "slug": "clothing-skirt-5",
+    "description": "A fantastic Skirt for all your needs. Durable and long-lasting!",
+    "price": 2491,
+    "comparePrice": 4388,
+    "stock": 123,
+    "brand": "Vanguard",
+    "rating": 4.2,
+    "reviewCount": 839,
+    "isFeatured": false,
+    "categorySlug": "clothing",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1434389672648-52fb04ad9949?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "1.4 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Vanguard Shorts Ultra",
+    "slug": "clothing-shorts-6",
+    "description": "A fantastic Shorts for all your needs. Durable and long-lasting!",
+    "price": 4752,
+    "comparePrice": 6105,
+    "stock": 20,
+    "brand": "Vanguard",
+    "rating": 4.2,
+    "reviewCount": 513,
+    "isFeatured": false,
+    "categorySlug": "clothing",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1489987705022-dcfbf55ee988?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "0.8 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Apex Socks Premium",
+    "slug": "clothing-socks-7",
+    "description": "A fantastic Socks for all your needs. Durable and long-lasting!",
+    "price": 3858,
+    "comparePrice": 4138,
+    "stock": 93,
+    "brand": "Apex",
+    "rating": 4.7,
+    "reviewCount": 783,
+    "isFeatured": false,
+    "categorySlug": "clothing",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1505022610485-0249ba5b3675?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "3.5 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Lumina Shoes Ultra",
+    "slug": "clothing-shoes-8",
+    "description": "A fantastic Shoes for all your needs. Durable and long-lasting!",
+    "price": 2149,
+    "comparePrice": 2487,
+    "stock": 110,
+    "brand": "Lumina",
+    "rating": 5,
+    "reviewCount": 946,
+    "isFeatured": false,
+    "categorySlug": "clothing",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1512436991641-fc80f6c24590?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "1.2 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Nexus Sneakers Ultra",
+    "slug": "clothing-sneakers-9",
+    "description": "A fantastic Sneakers for all your needs. Durable and long-lasting!",
+    "price": 3808,
+    "comparePrice": 4544,
+    "stock": 162,
+    "brand": "Nexus",
+    "rating": 3.1,
+    "reviewCount": 107,
+    "isFeatured": false,
+    "categorySlug": "clothing",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1512436991641-fc80f6c24590?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "4.8 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Vanguard Boots Standard",
+    "slug": "clothing-boots-10",
+    "description": "A fantastic Boots for all your needs. Durable and long-lasting!",
+    "price": 3232,
+    "comparePrice": 3659,
+    "stock": 76,
+    "brand": "Vanguard",
+    "rating": 3.9,
+    "reviewCount": 400,
+    "isFeatured": false,
+    "categorySlug": "clothing",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1550614000-4b95d4ed79d2?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "0.3 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Lumina Hat Essential",
+    "slug": "clothing-hat-11",
+    "description": "A fantastic Hat for all your needs. Durable and long-lasting!",
+    "price": 2582,
+    "comparePrice": 3123,
+    "stock": 146,
+    "brand": "Lumina",
+    "rating": 4.7,
+    "reviewCount": 52,
+    "isFeatured": true,
+    "categorySlug": "clothing",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "5.1 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Omni Scarf Premium",
+    "slug": "clothing-scarf-12",
+    "description": "A fantastic Scarf for all your needs. Durable and long-lasting!",
+    "price": 4812,
+    "comparePrice": 6509,
+    "stock": 49,
+    "brand": "Omni",
+    "rating": 4.6,
+    "reviewCount": 76,
+    "isFeatured": false,
+    "categorySlug": "clothing",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1434389672648-52fb04ad9949?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "0.2 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Stratos Gloves Pro",
+    "slug": "clothing-gloves-13",
+    "description": "A fantastic Gloves for all your needs. Durable and long-lasting!",
+    "price": 4760,
+    "comparePrice": 5886,
+    "stock": 15,
+    "brand": "Stratos",
+    "rating": 3,
+    "reviewCount": 788,
+    "isFeatured": false,
+    "categorySlug": "clothing",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "1.1 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Nexus Belt Premium",
+    "slug": "clothing-belt-14",
+    "description": "A fantastic Belt for all your needs. Durable and long-lasting!",
+    "price": 4929,
+    "comparePrice": 6996,
+    "stock": 53,
+    "brand": "Nexus",
+    "rating": 4.8,
+    "reviewCount": 769,
+    "isFeatured": true,
+    "categorySlug": "clothing",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1512436991641-fc80f6c24590?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "0.5 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Omni Tie Essential",
+    "slug": "clothing-tie-15",
+    "description": "A fantastic Tie for all your needs. Durable and long-lasting!",
+    "price": 1394,
+    "comparePrice": 1724,
+    "stock": 157,
+    "brand": "Omni",
+    "rating": 4.8,
+    "reviewCount": 561,
+    "isFeatured": false,
+    "categorySlug": "clothing",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1550614000-4b95d4ed79d2?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "4.6 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Echo Suit Essential",
+    "slug": "clothing-suit-16",
+    "description": "A fantastic Suit for all your needs. Durable and long-lasting!",
+    "price": 3080,
+    "comparePrice": 5172,
+    "stock": 188,
+    "brand": "Echo",
+    "rating": 5,
+    "reviewCount": 256,
+    "isFeatured": true,
+    "categorySlug": "clothing",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1434389672648-52fb04ad9949?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "1.6 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Pinnacle Blazer Advanced",
+    "slug": "clothing-blazer-17",
+    "description": "A fantastic Blazer for all your needs. Durable and long-lasting!",
+    "price": 356,
+    "comparePrice": 2416,
+    "stock": 76,
+    "brand": "Pinnacle",
+    "rating": 4.8,
+    "reviewCount": 491,
+    "isFeatured": false,
+    "categorySlug": "clothing",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1550614000-4b95d4ed79d2?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "2.1 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Apex Coat Advanced",
+    "slug": "clothing-coat-18",
+    "description": "A fantastic Coat for all your needs. Durable and long-lasting!",
+    "price": 2854,
+    "comparePrice": 4330,
+    "stock": 81,
+    "brand": "Apex",
+    "rating": 3.6,
+    "reviewCount": 640,
+    "isFeatured": false,
+    "categorySlug": "clothing",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1505022610485-0249ba5b3675?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "4.1 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Echo Swimsuit Essential",
+    "slug": "clothing-swimsuit-19",
+    "description": "A fantastic Swimsuit for all your needs. Durable and long-lasting!",
+    "price": 5088,
+    "comparePrice": 6028,
+    "stock": 36,
+    "brand": "Echo",
+    "rating": 4.6,
+    "reviewCount": 574,
+    "isFeatured": true,
+    "categorySlug": "clothing",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "1.5 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Echo Underwear Elite",
+    "slug": "clothing-underwear-20",
+    "description": "A fantastic Underwear for all your needs. Durable and long-lasting!",
+    "price": 691,
+    "comparePrice": 2040,
+    "stock": 129,
+    "brand": "Echo",
+    "rating": 3.4,
+    "reviewCount": 596,
+    "isFeatured": false,
+    "categorySlug": "clothing",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1505022610485-0249ba5b3675?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "0.9 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Vanguard Pajamas Advanced",
+    "slug": "clothing-pajamas-21",
+    "description": "A fantastic Pajamas for all your needs. Durable and long-lasting!",
+    "price": 4866,
+    "comparePrice": 6200,
+    "stock": 205,
+    "brand": "Vanguard",
+    "rating": 3.5,
+    "reviewCount": 907,
+    "isFeatured": true,
+    "categorySlug": "clothing",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1489987705022-dcfbf55ee988?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "0.3 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Omni Activewear Elite",
+    "slug": "clothing-activewear-22",
+    "description": "A fantastic Activewear for all your needs. Durable and long-lasting!",
+    "price": 3913,
+    "comparePrice": 4753,
+    "stock": 44,
+    "brand": "Omni",
+    "rating": 3.3,
+    "reviewCount": 376,
+    "isFeatured": false,
+    "categorySlug": "clothing",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1489987705022-dcfbf55ee988?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "1.2 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Nexus Leggings Advanced",
+    "slug": "clothing-leggings-23",
+    "description": "A fantastic Leggings for all your needs. Durable and long-lasting!",
+    "price": 1690,
+    "comparePrice": 3639,
+    "stock": 146,
+    "brand": "Nexus",
+    "rating": 4.3,
+    "reviewCount": 922,
+    "isFeatured": false,
+    "categorySlug": "clothing",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1505022610485-0249ba5b3675?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "4.8 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Pinnacle Hoodie Advanced",
+    "slug": "clothing-hoodie-24",
+    "description": "A fantastic Hoodie for all your needs. Durable and long-lasting!",
+    "price": 250,
+    "comparePrice": 2076,
+    "stock": 91,
+    "brand": "Pinnacle",
+    "rating": 3.5,
+    "reviewCount": 1001,
+    "isFeatured": true,
+    "categorySlug": "clothing",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1434389672648-52fb04ad9949?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "0.3 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Nexus Coffee Maker Premium",
+    "slug": "home-kitchen-coffee-maker-0",
+    "description": "A fantastic Coffee Maker for all your needs. Durable and long-lasting!",
+    "price": 1121,
+    "comparePrice": 2064,
+    "stock": 85,
+    "brand": "Nexus",
+    "rating": 4.4,
+    "reviewCount": 709,
+    "isFeatured": false,
+    "categorySlug": "home-kitchen",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1578683014746-98ac597dcea5?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "0.9 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Pinnacle Blender Elite",
+    "slug": "home-kitchen-blender-1",
+    "description": "A fantastic Blender for all your needs. Durable and long-lasting!",
+    "price": 971,
+    "comparePrice": 2191,
+    "stock": 15,
+    "brand": "Pinnacle",
+    "rating": 5,
+    "reviewCount": 458,
+    "isFeatured": true,
+    "categorySlug": "home-kitchen",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "3.9 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Echo Toaster Pro",
+    "slug": "home-kitchen-toaster-2",
+    "description": "A fantastic Toaster for all your needs. Durable and long-lasting!",
+    "price": 4354,
+    "comparePrice": 4910,
+    "stock": 130,
+    "brand": "Echo",
+    "rating": 3.5,
+    "reviewCount": 181,
+    "isFeatured": false,
+    "categorySlug": "home-kitchen",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1583847268964-b28ce7f415e6?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "1.6 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Vanguard Microwave Pro",
+    "slug": "home-kitchen-microwave-3",
+    "description": "A fantastic Microwave for all your needs. Durable and long-lasting!",
+    "price": 1406,
+    "comparePrice": 3256,
+    "stock": 195,
+    "brand": "Vanguard",
+    "rating": 4.6,
+    "reviewCount": 324,
+    "isFeatured": false,
+    "categorySlug": "home-kitchen",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "1.8 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Echo Mixer Advanced",
+    "slug": "home-kitchen-mixer-4",
+    "description": "A fantastic Mixer for all your needs. Durable and long-lasting!",
+    "price": 1670,
+    "comparePrice": 3289,
+    "stock": 19,
+    "brand": "Echo",
+    "rating": 4.2,
+    "reviewCount": 347,
+    "isFeatured": false,
+    "categorySlug": "home-kitchen",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1583847268964-b28ce7f415e6?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "3.9 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Lumina Frying Pan Essential",
+    "slug": "home-kitchen-frying-pan-5",
+    "description": "A fantastic Frying Pan for all your needs. Durable and long-lasting!",
+    "price": 1291,
+    "comparePrice": 2990,
+    "stock": 171,
+    "brand": "Lumina",
+    "rating": 3.5,
+    "reviewCount": 189,
+    "isFeatured": false,
+    "categorySlug": "home-kitchen",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1583847268964-b28ce7f415e6?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "2.9 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Apex Saucepan Premium",
+    "slug": "home-kitchen-saucepan-6",
+    "description": "A fantastic Saucepan for all your needs. Durable and long-lasting!",
+    "price": 1827,
+    "comparePrice": 3407,
+    "stock": 156,
+    "brand": "Apex",
+    "rating": 3,
+    "reviewCount": 687,
+    "isFeatured": false,
+    "categorySlug": "home-kitchen",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1583847268964-b28ce7f415e6?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "5.1 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Zenith Knife Set Premium",
+    "slug": "home-kitchen-knife-set-7",
+    "description": "A fantastic Knife Set for all your needs. Durable and long-lasting!",
+    "price": 1184,
+    "comparePrice": 1837,
+    "stock": 128,
+    "brand": "Zenith",
+    "rating": 3.7,
+    "reviewCount": 989,
+    "isFeatured": true,
+    "categorySlug": "home-kitchen",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "3.5 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Zenith Cutting Board Pro",
+    "slug": "home-kitchen-cutting-board-8",
+    "description": "A fantastic Cutting Board for all your needs. Durable and long-lasting!",
+    "price": 3314,
+    "comparePrice": 4918,
+    "stock": 148,
+    "brand": "Zenith",
+    "rating": 3.2,
+    "reviewCount": 669,
+    "isFeatured": true,
+    "categorySlug": "home-kitchen",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "2.7 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Pinnacle Plates Elite",
+    "slug": "home-kitchen-plates-9",
+    "description": "A fantastic Plates for all your needs. Durable and long-lasting!",
+    "price": 3048,
+    "comparePrice": 5112,
+    "stock": 176,
+    "brand": "Pinnacle",
+    "rating": 3.2,
+    "reviewCount": 766,
+    "isFeatured": true,
+    "categorySlug": "home-kitchen",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1584622650111-993a426bfbf0?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "2.5 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Nexus Bowls Advanced",
+    "slug": "home-kitchen-bowls-10",
+    "description": "A fantastic Bowls for all your needs. Durable and long-lasting!",
+    "price": 1401,
+    "comparePrice": 2057,
+    "stock": 37,
+    "brand": "Nexus",
+    "rating": 3.3,
+    "reviewCount": 370,
+    "isFeatured": false,
+    "categorySlug": "home-kitchen",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1578683014746-98ac597dcea5?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "3.8 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Apex Glasses Elite",
+    "slug": "home-kitchen-glasses-11",
+    "description": "A fantastic Glasses for all your needs. Durable and long-lasting!",
+    "price": 2897,
+    "comparePrice": 4869,
+    "stock": 172,
+    "brand": "Apex",
+    "rating": 3.4,
+    "reviewCount": 172,
+    "isFeatured": false,
+    "categorySlug": "home-kitchen",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1578683014746-98ac597dcea5?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "0.9 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Zenith Mugs Essential",
+    "slug": "home-kitchen-mugs-12",
+    "description": "A fantastic Mugs for all your needs. Durable and long-lasting!",
+    "price": 3887,
+    "comparePrice": 4227,
+    "stock": 208,
+    "brand": "Zenith",
+    "rating": 4.8,
+    "reviewCount": 816,
+    "isFeatured": false,
+    "categorySlug": "home-kitchen",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "2.6 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Echo Silverware Pro",
+    "slug": "home-kitchen-silverware-13",
+    "description": "A fantastic Silverware for all your needs. Durable and long-lasting!",
+    "price": 3033,
+    "comparePrice": 4677,
+    "stock": 114,
+    "brand": "Echo",
+    "rating": 3.4,
+    "reviewCount": 659,
+    "isFeatured": false,
+    "categorySlug": "home-kitchen",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "1.1 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Apex Tupperware Standard",
+    "slug": "home-kitchen-tupperware-14",
+    "description": "A fantastic Tupperware for all your needs. Durable and long-lasting!",
+    "price": 4758,
+    "comparePrice": 5481,
+    "stock": 90,
+    "brand": "Apex",
+    "rating": 5,
+    "reviewCount": 72,
+    "isFeatured": false,
+    "categorySlug": "home-kitchen",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "4.4 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Lumina Dish Towels Essential",
+    "slug": "home-kitchen-dish-towels-15",
+    "description": "A fantastic Dish Towels for all your needs. Durable and long-lasting!",
+    "price": 4384,
+    "comparePrice": 5748,
+    "stock": 140,
+    "brand": "Lumina",
+    "rating": 3.6,
+    "reviewCount": 815,
+    "isFeatured": true,
+    "categorySlug": "home-kitchen",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "0.1 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Pinnacle Oven Mitts Elite",
+    "slug": "home-kitchen-oven-mitts-16",
+    "description": "A fantastic Oven Mitts for all your needs. Durable and long-lasting!",
+    "price": 1837,
+    "comparePrice": 2449,
+    "stock": 191,
+    "brand": "Pinnacle",
+    "rating": 3.9,
+    "reviewCount": 133,
+    "isFeatured": false,
+    "categorySlug": "home-kitchen",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1583847268964-b28ce7f415e6?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "2.7 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Echo Spatula Ultra",
+    "slug": "home-kitchen-spatula-17",
+    "description": "A fantastic Spatula for all your needs. Durable and long-lasting!",
+    "price": 3213,
+    "comparePrice": 3933,
+    "stock": 55,
+    "brand": "Echo",
+    "rating": 3.6,
+    "reviewCount": 570,
+    "isFeatured": false,
+    "categorySlug": "home-kitchen",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1578683014746-98ac597dcea5?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "3.9 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Zenith Whisk Elite",
+    "slug": "home-kitchen-whisk-18",
+    "description": "A fantastic Whisk for all your needs. Durable and long-lasting!",
+    "price": 4481,
+    "comparePrice": 4610,
+    "stock": 113,
+    "brand": "Zenith",
+    "rating": 4.6,
+    "reviewCount": 745,
+    "isFeatured": false,
+    "categorySlug": "home-kitchen",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1578683014746-98ac597dcea5?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "0.8 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Vanguard Measuring Cups Premium",
+    "slug": "home-kitchen-measuring-cups-19",
+    "description": "A fantastic Measuring Cups for all your needs. Durable and long-lasting!",
+    "price": 1784,
+    "comparePrice": 1948,
+    "stock": 122,
+    "brand": "Vanguard",
+    "rating": 3.4,
+    "reviewCount": 878,
+    "isFeatured": false,
+    "categorySlug": "home-kitchen",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "3.5 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Stratos Can Opener Standard",
+    "slug": "home-kitchen-can-opener-20",
+    "description": "A fantastic Can Opener for all your needs. Durable and long-lasting!",
+    "price": 4691,
+    "comparePrice": 5931,
+    "stock": 57,
+    "brand": "Stratos",
+    "rating": 3.4,
+    "reviewCount": 44,
+    "isFeatured": false,
+    "categorySlug": "home-kitchen",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "3.7 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Stratos Peeler Pro",
+    "slug": "home-kitchen-peeler-21",
+    "description": "A fantastic Peeler for all your needs. Durable and long-lasting!",
+    "price": 3590,
+    "comparePrice": 3995,
+    "stock": 23,
+    "brand": "Stratos",
+    "rating": 3.1,
+    "reviewCount": 816,
+    "isFeatured": false,
+    "categorySlug": "home-kitchen",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "3.3 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Nexus Grater Ultra",
+    "slug": "home-kitchen-grater-22",
+    "description": "A fantastic Grater for all your needs. Durable and long-lasting!",
+    "price": 2781,
+    "comparePrice": 4045,
+    "stock": 208,
+    "brand": "Nexus",
+    "rating": 4.6,
+    "reviewCount": 186,
+    "isFeatured": true,
+    "categorySlug": "home-kitchen",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "0.4 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Echo Colander Ultra",
+    "slug": "home-kitchen-colander-23",
+    "description": "A fantastic Colander for all your needs. Durable and long-lasting!",
+    "price": 4807,
+    "comparePrice": 5422,
+    "stock": 80,
+    "brand": "Echo",
+    "rating": 4.8,
+    "reviewCount": 567,
+    "isFeatured": false,
+    "categorySlug": "home-kitchen",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "1.8 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Echo Baking Sheet Ultra",
+    "slug": "home-kitchen-baking-sheet-24",
+    "description": "A fantastic Baking Sheet for all your needs. Durable and long-lasting!",
+    "price": 308,
+    "comparePrice": 1665,
+    "stock": 138,
+    "brand": "Echo",
+    "rating": 4.9,
+    "reviewCount": 294,
+    "isFeatured": true,
+    "categorySlug": "home-kitchen",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1583847268964-b28ce7f415e6?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "3.3 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Zenith Basketball Pro",
+    "slug": "sports-basketball-0",
+    "description": "A fantastic Basketball for all your needs. Durable and long-lasting!",
+    "price": 4301,
+    "comparePrice": 4887,
+    "stock": 202,
+    "brand": "Zenith",
+    "rating": 4.4,
+    "reviewCount": 836,
+    "isFeatured": false,
+    "categorySlug": "sports",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "2.7 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Apex Football Pro",
+    "slug": "sports-football-1",
+    "description": "A fantastic Football for all your needs. Durable and long-lasting!",
+    "price": 2079,
+    "comparePrice": 3780,
+    "stock": 154,
+    "brand": "Apex",
+    "rating": 3.3,
+    "reviewCount": 353,
+    "isFeatured": false,
+    "categorySlug": "sports",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "2.9 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Omni Soccer Ball Standard",
+    "slug": "sports-soccer-ball-2",
+    "description": "A fantastic Soccer Ball for all your needs. Durable and long-lasting!",
+    "price": 1461,
+    "comparePrice": 1956,
+    "stock": 135,
+    "brand": "Omni",
+    "rating": 3.8,
+    "reviewCount": 69,
+    "isFeatured": false,
+    "categorySlug": "sports",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1538805060064-929f45a3ceac?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "2.1 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Lumina Baseball Pro",
+    "slug": "sports-baseball-3",
+    "description": "A fantastic Baseball for all your needs. Durable and long-lasting!",
+    "price": 4255,
+    "comparePrice": 4688,
+    "stock": 91,
+    "brand": "Lumina",
+    "rating": 3,
+    "reviewCount": 521,
+    "isFeatured": false,
+    "categorySlug": "sports",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1526508426118-1e524eb11d08?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "3.3 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Echo Tennis Racket Pro",
+    "slug": "sports-tennis-racket-4",
+    "description": "A fantastic Tennis Racket for all your needs. Durable and long-lasting!",
+    "price": 2930,
+    "comparePrice": 4659,
+    "stock": 122,
+    "brand": "Echo",
+    "rating": 4.3,
+    "reviewCount": 54,
+    "isFeatured": false,
+    "categorySlug": "sports",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1526508426118-1e524eb11d08?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "4.0 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Echo Golf Clubs Essential",
+    "slug": "sports-golf-clubs-5",
+    "description": "A fantastic Golf Clubs for all your needs. Durable and long-lasting!",
+    "price": 2479,
+    "comparePrice": 4458,
+    "stock": 77,
+    "brand": "Echo",
+    "rating": 3.6,
+    "reviewCount": 787,
+    "isFeatured": false,
+    "categorySlug": "sports",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "0.6 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Stratos Yoga Mat Standard",
+    "slug": "sports-yoga-mat-6",
+    "description": "A fantastic Yoga Mat for all your needs. Durable and long-lasting!",
+    "price": 2229,
+    "comparePrice": 2614,
+    "stock": 90,
+    "brand": "Stratos",
+    "rating": 3.2,
+    "reviewCount": 90,
+    "isFeatured": false,
+    "categorySlug": "sports",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "2.2 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Echo Dumbbells Classic",
+    "slug": "sports-dumbbells-7",
+    "description": "A fantastic Dumbbells for all your needs. Durable and long-lasting!",
+    "price": 4577,
+    "comparePrice": 5271,
+    "stock": 142,
+    "brand": "Echo",
+    "rating": 3.4,
+    "reviewCount": 445,
+    "isFeatured": false,
+    "categorySlug": "sports",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "2.4 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Lumina Kettlebell Ultra",
+    "slug": "sports-kettlebell-8",
+    "description": "A fantastic Kettlebell for all your needs. Durable and long-lasting!",
+    "price": 3148,
+    "comparePrice": 5096,
+    "stock": 137,
+    "brand": "Lumina",
+    "rating": 3.6,
+    "reviewCount": 325,
+    "isFeatured": false,
+    "categorySlug": "sports",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "2.5 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Stratos Jump Rope Ultra",
+    "slug": "sports-jump-rope-9",
+    "description": "A fantastic Jump Rope for all your needs. Durable and long-lasting!",
+    "price": 4022,
+    "comparePrice": 4224,
+    "stock": 180,
+    "brand": "Stratos",
+    "rating": 3.7,
+    "reviewCount": 259,
+    "isFeatured": false,
+    "categorySlug": "sports",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "2.9 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Echo Resistance Bands Pro",
+    "slug": "sports-resistance-bands-10",
+    "description": "A fantastic Resistance Bands for all your needs. Durable and long-lasting!",
+    "price": 422,
+    "comparePrice": 659,
+    "stock": 130,
+    "brand": "Echo",
+    "rating": 4.6,
+    "reviewCount": 977,
+    "isFeatured": false,
+    "categorySlug": "sports",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1526508426118-1e524eb11d08?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "4.6 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Vanguard Treadmill Advanced",
+    "slug": "sports-treadmill-11",
+    "description": "A fantastic Treadmill for all your needs. Durable and long-lasting!",
+    "price": 4052,
+    "comparePrice": 5346,
+    "stock": 202,
+    "brand": "Vanguard",
+    "rating": 4,
+    "reviewCount": 711,
+    "isFeatured": true,
+    "categorySlug": "sports",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "1.1 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Omni Stationary Bike Classic",
+    "slug": "sports-stationary-bike-12",
+    "description": "A fantastic Stationary Bike for all your needs. Durable and long-lasting!",
+    "price": 595,
+    "comparePrice": 1568,
+    "stock": 120,
+    "brand": "Omni",
+    "rating": 3.6,
+    "reviewCount": 648,
+    "isFeatured": false,
+    "categorySlug": "sports",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "0.5 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Nexus Rowing Machine Classic",
+    "slug": "sports-rowing-machine-13",
+    "description": "A fantastic Rowing Machine for all your needs. Durable and long-lasting!",
+    "price": 487,
+    "comparePrice": 838,
+    "stock": 159,
+    "brand": "Nexus",
+    "rating": 3.7,
+    "reviewCount": 428,
+    "isFeatured": false,
+    "categorySlug": "sports",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "0.9 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Vanguard Punching Bag Premium",
+    "slug": "sports-punching-bag-14",
+    "description": "A fantastic Punching Bag for all your needs. Durable and long-lasting!",
+    "price": 4022,
+    "comparePrice": 4980,
+    "stock": 142,
+    "brand": "Vanguard",
+    "rating": 3.8,
+    "reviewCount": 834,
+    "isFeatured": false,
+    "categorySlug": "sports",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1554260570914-05240a2a4c14?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "0.7 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Vanguard Boxing Gloves Ultra",
+    "slug": "sports-boxing-gloves-15",
+    "description": "A fantastic Boxing Gloves for all your needs. Durable and long-lasting!",
+    "price": 3965,
+    "comparePrice": 5567,
+    "stock": 127,
+    "brand": "Vanguard",
+    "rating": 4.4,
+    "reviewCount": 263,
+    "isFeatured": false,
+    "categorySlug": "sports",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "4.2 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Nexus Helmet Pro",
+    "slug": "sports-helmet-16",
+    "description": "A fantastic Helmet for all your needs. Durable and long-lasting!",
+    "price": 4106,
+    "comparePrice": 4942,
+    "stock": 90,
+    "brand": "Nexus",
+    "rating": 4.7,
+    "reviewCount": 690,
+    "isFeatured": false,
+    "categorySlug": "sports",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "3.3 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Pinnacle Skateboard Pro",
+    "slug": "sports-skateboard-17",
+    "description": "A fantastic Skateboard for all your needs. Durable and long-lasting!",
+    "price": 5046,
+    "comparePrice": 7052,
+    "stock": 46,
+    "brand": "Pinnacle",
+    "rating": 3.7,
+    "reviewCount": 285,
+    "isFeatured": false,
+    "categorySlug": "sports",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1526508426118-1e524eb11d08?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "1.2 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Stratos Surfboard Ultra",
+    "slug": "sports-surfboard-18",
+    "description": "A fantastic Surfboard for all your needs. Durable and long-lasting!",
+    "price": 4368,
+    "comparePrice": 5415,
+    "stock": 65,
+    "brand": "Stratos",
+    "rating": 4.4,
+    "reviewCount": 806,
+    "isFeatured": false,
+    "categorySlug": "sports",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "2.2 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Echo Snowboard Ultra",
+    "slug": "sports-snowboard-19",
+    "description": "A fantastic Snowboard for all your needs. Durable and long-lasting!",
+    "price": 453,
+    "comparePrice": 1344,
+    "stock": 186,
+    "brand": "Echo",
+    "rating": 3.9,
+    "reviewCount": 867,
+    "isFeatured": false,
+    "categorySlug": "sports",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1526508426118-1e524eb11d08?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "2.3 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Lumina Skis Essential",
+    "slug": "sports-skis-20",
+    "description": "A fantastic Skis for all your needs. Durable and long-lasting!",
+    "price": 3071,
+    "comparePrice": 4492,
+    "stock": 165,
+    "brand": "Lumina",
+    "rating": 3.9,
+    "reviewCount": 225,
+    "isFeatured": false,
+    "categorySlug": "sports",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "3.3 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Zenith Tent Elite",
+    "slug": "sports-tent-21",
+    "description": "A fantastic Tent for all your needs. Durable and long-lasting!",
+    "price": 2148,
+    "comparePrice": 2608,
+    "stock": 82,
+    "brand": "Zenith",
+    "rating": 3.5,
+    "reviewCount": 653,
+    "isFeatured": false,
+    "categorySlug": "sports",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1538805060064-929f45a3ceac?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "0.4 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Zenith Sleeping Bag Premium",
+    "slug": "sports-sleeping-bag-22",
+    "description": "A fantastic Sleeping Bag for all your needs. Durable and long-lasting!",
+    "price": 611,
+    "comparePrice": 1146,
+    "stock": 165,
+    "brand": "Zenith",
+    "rating": 4.6,
+    "reviewCount": 478,
+    "isFeatured": false,
+    "categorySlug": "sports",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1526508426118-1e524eb11d08?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "0.1 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Pinnacle Backpack Standard",
+    "slug": "sports-backpack-23",
+    "description": "A fantastic Backpack for all your needs. Durable and long-lasting!",
+    "price": 197,
+    "comparePrice": 686,
+    "stock": 69,
+    "brand": "Pinnacle",
+    "rating": 3.3,
+    "reviewCount": 421,
+    "isFeatured": false,
+    "categorySlug": "sports",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "3.4 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Stratos Water Bottle Classic",
+    "slug": "sports-water-bottle-24",
+    "description": "A fantastic Water Bottle for all your needs. Durable and long-lasting!",
+    "price": 4175,
+    "comparePrice": 5881,
+    "stock": 52,
+    "brand": "Stratos",
+    "rating": 3.7,
+    "reviewCount": 29,
+    "isFeatured": false,
+    "categorySlug": "sports",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "3.8 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Stratos Lipstick Standard",
+    "slug": "beauty-lipstick-0",
+    "description": "A fantastic Lipstick for all your needs. Durable and long-lasting!",
+    "price": 3152,
+    "comparePrice": 3571,
+    "stock": 85,
+    "brand": "Stratos",
+    "rating": 3.6,
+    "reviewCount": 59,
+    "isFeatured": true,
+    "categorySlug": "beauty",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1598440947619-22a45a05d6da?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "3.9 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Apex Mascara Advanced",
+    "slug": "beauty-mascara-1",
+    "description": "A fantastic Mascara for all your needs. Durable and long-lasting!",
+    "price": 5030,
+    "comparePrice": 5788,
+    "stock": 54,
+    "brand": "Apex",
+    "rating": 4.1,
+    "reviewCount": 41,
+    "isFeatured": false,
+    "categorySlug": "beauty",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1555529902-5ea50ac6150c?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "3.7 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Apex Foundation Standard",
+    "slug": "beauty-foundation-2",
+    "description": "A fantastic Foundation for all your needs. Durable and long-lasting!",
+    "price": 528,
+    "comparePrice": 2205,
+    "stock": 52,
+    "brand": "Apex",
+    "rating": 4.2,
+    "reviewCount": 341,
+    "isFeatured": true,
+    "categorySlug": "beauty",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1598440947619-22a45a05d6da?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "1.5 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Echo Concealer Pro",
+    "slug": "beauty-concealer-3",
+    "description": "A fantastic Concealer for all your needs. Durable and long-lasting!",
+    "price": 5045,
+    "comparePrice": 5730,
+    "stock": 128,
+    "brand": "Echo",
+    "rating": 4.7,
+    "reviewCount": 794,
+    "isFeatured": false,
+    "categorySlug": "beauty",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1512496282875-01fb2c5ff071?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "2.2 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Stratos Eyeliner Pro",
+    "slug": "beauty-eyeliner-4",
+    "description": "A fantastic Eyeliner for all your needs. Durable and long-lasting!",
+    "price": 4790,
+    "comparePrice": 6094,
+    "stock": 30,
+    "brand": "Stratos",
+    "rating": 3.5,
+    "reviewCount": 721,
+    "isFeatured": false,
+    "categorySlug": "beauty",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1620916035251-244439c27f31?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "1.1 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Zenith Eyeshadow Elite",
+    "slug": "beauty-eyeshadow-5",
+    "description": "A fantastic Eyeshadow for all your needs. Durable and long-lasting!",
+    "price": 3164,
+    "comparePrice": 4516,
+    "stock": 83,
+    "brand": "Zenith",
+    "rating": 4.5,
+    "reviewCount": 672,
+    "isFeatured": false,
+    "categorySlug": "beauty",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "3.7 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Stratos Blush Premium",
+    "slug": "beauty-blush-6",
+    "description": "A fantastic Blush for all your needs. Durable and long-lasting!",
+    "price": 2234,
+    "comparePrice": 2417,
+    "stock": 180,
+    "brand": "Stratos",
+    "rating": 4.3,
+    "reviewCount": 297,
+    "isFeatured": false,
+    "categorySlug": "beauty",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1512496282875-01fb2c5ff071?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "2.9 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Lumina Bronzer Standard",
+    "slug": "beauty-bronzer-7",
+    "description": "A fantastic Bronzer for all your needs. Durable and long-lasting!",
+    "price": 3325,
+    "comparePrice": 5253,
+    "stock": 156,
+    "brand": "Lumina",
+    "rating": 3.3,
+    "reviewCount": 488,
+    "isFeatured": true,
+    "categorySlug": "beauty",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "1.5 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Nexus Highlighter Classic",
+    "slug": "beauty-highlighter-8",
+    "description": "A fantastic Highlighter for all your needs. Durable and long-lasting!",
+    "price": 4826,
+    "comparePrice": 6373,
+    "stock": 80,
+    "brand": "Nexus",
+    "rating": 3.1,
+    "reviewCount": 671,
+    "isFeatured": false,
+    "categorySlug": "beauty",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1598440947619-22a45a05d6da?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "2.2 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Echo Setting Spray Advanced",
+    "slug": "beauty-setting-spray-9",
+    "description": "A fantastic Setting Spray for all your needs. Durable and long-lasting!",
+    "price": 3516,
+    "comparePrice": 4348,
+    "stock": 53,
+    "brand": "Echo",
+    "rating": 3,
+    "reviewCount": 698,
+    "isFeatured": false,
+    "categorySlug": "beauty",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1616683693504-3ea1ed400494?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "0.9 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Stratos Makeup Brushes Advanced",
+    "slug": "beauty-makeup-brushes-10",
+    "description": "A fantastic Makeup Brushes for all your needs. Durable and long-lasting!",
+    "price": 1949,
+    "comparePrice": 3651,
+    "stock": 127,
+    "brand": "Stratos",
+    "rating": 4.9,
+    "reviewCount": 792,
+    "isFeatured": false,
+    "categorySlug": "beauty",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "4.2 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Lumina Perfume Elite",
+    "slug": "beauty-perfume-11",
+    "description": "A fantastic Perfume for all your needs. Durable and long-lasting!",
+    "price": 1548,
+    "comparePrice": 3442,
+    "stock": 47,
+    "brand": "Lumina",
+    "rating": 4.7,
+    "reviewCount": 779,
+    "isFeatured": false,
+    "categorySlug": "beauty",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1555529902-5ea50ac6150c?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "0.8 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Nexus Cologne Classic",
+    "slug": "beauty-cologne-12",
+    "description": "A fantastic Cologne for all your needs. Durable and long-lasting!",
+    "price": 2854,
+    "comparePrice": 3431,
+    "stock": 53,
+    "brand": "Nexus",
+    "rating": 4.2,
+    "reviewCount": 36,
+    "isFeatured": false,
+    "categorySlug": "beauty",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1598440947619-22a45a05d6da?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "4.5 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Lumina Lotion Essential",
+    "slug": "beauty-lotion-13",
+    "description": "A fantastic Lotion for all your needs. Durable and long-lasting!",
+    "price": 1760,
+    "comparePrice": 2317,
+    "stock": 91,
+    "brand": "Lumina",
+    "rating": 4.2,
+    "reviewCount": 865,
+    "isFeatured": true,
+    "categorySlug": "beauty",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1620916035251-244439c27f31?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "1.1 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Omni Moisturizer Classic",
+    "slug": "beauty-moisturizer-14",
+    "description": "A fantastic Moisturizer for all your needs. Durable and long-lasting!",
+    "price": 5047,
+    "comparePrice": 5630,
+    "stock": 66,
+    "brand": "Omni",
+    "rating": 4.6,
+    "reviewCount": 213,
+    "isFeatured": false,
+    "categorySlug": "beauty",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1512496282875-01fb2c5ff071?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "0.2 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Echo Cleanser Elite",
+    "slug": "beauty-cleanser-15",
+    "description": "A fantastic Cleanser for all your needs. Durable and long-lasting!",
+    "price": 4738,
+    "comparePrice": 6687,
+    "stock": 113,
+    "brand": "Echo",
+    "rating": 3.7,
+    "reviewCount": 389,
+    "isFeatured": false,
+    "categorySlug": "beauty",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1616683693504-3ea1ed400494?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "2.8 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Apex Toner Elite",
+    "slug": "beauty-toner-16",
+    "description": "A fantastic Toner for all your needs. Durable and long-lasting!",
+    "price": 1177,
+    "comparePrice": 2071,
+    "stock": 207,
+    "brand": "Apex",
+    "rating": 4.1,
+    "reviewCount": 801,
+    "isFeatured": false,
+    "categorySlug": "beauty",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "2.2 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Apex Serum Essential",
+    "slug": "beauty-serum-17",
+    "description": "A fantastic Serum for all your needs. Durable and long-lasting!",
+    "price": 1972,
+    "comparePrice": 4056,
+    "stock": 74,
+    "brand": "Apex",
+    "rating": 3.5,
+    "reviewCount": 600,
+    "isFeatured": true,
+    "categorySlug": "beauty",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "4.8 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Nexus Face Mask Premium",
+    "slug": "beauty-face-mask-18",
+    "description": "A fantastic Face Mask for all your needs. Durable and long-lasting!",
+    "price": 203,
+    "comparePrice": 2081,
+    "stock": 106,
+    "brand": "Nexus",
+    "rating": 3.2,
+    "reviewCount": 16,
+    "isFeatured": false,
+    "categorySlug": "beauty",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1616683693504-3ea1ed400494?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "0.7 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Stratos Shampoo Ultra",
+    "slug": "beauty-shampoo-19",
+    "description": "A fantastic Shampoo for all your needs. Durable and long-lasting!",
+    "price": 1100,
+    "comparePrice": 3159,
+    "stock": 194,
+    "brand": "Stratos",
+    "rating": 3.7,
+    "reviewCount": 340,
+    "isFeatured": false,
+    "categorySlug": "beauty",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1555529902-5ea50ac6150c?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "0.7 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Zenith Conditioner Elite",
+    "slug": "beauty-conditioner-20",
+    "description": "A fantastic Conditioner for all your needs. Durable and long-lasting!",
+    "price": 3080,
+    "comparePrice": 3285,
+    "stock": 173,
+    "brand": "Zenith",
+    "rating": 4.2,
+    "reviewCount": 834,
+    "isFeatured": false,
+    "categorySlug": "beauty",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1555529902-5ea50ac6150c?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "2.1 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Pinnacle Hairspray Elite",
+    "slug": "beauty-hairspray-21",
+    "description": "A fantastic Hairspray for all your needs. Durable and long-lasting!",
+    "price": 3259,
+    "comparePrice": 5006,
+    "stock": 188,
+    "brand": "Pinnacle",
+    "rating": 3.5,
+    "reviewCount": 101,
+    "isFeatured": false,
+    "categorySlug": "beauty",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "3.9 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Echo Hair Gel Elite",
+    "slug": "beauty-hair-gel-22",
+    "description": "A fantastic Hair Gel for all your needs. Durable and long-lasting!",
+    "price": 1513,
+    "comparePrice": 2178,
+    "stock": 151,
+    "brand": "Echo",
+    "rating": 4.5,
+    "reviewCount": 904,
+    "isFeatured": false,
+    "categorySlug": "beauty",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1598440947619-22a45a05d6da?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "3.2 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Lumina Nail Polish Standard",
+    "slug": "beauty-nail-polish-23",
+    "description": "A fantastic Nail Polish for all your needs. Durable and long-lasting!",
+    "price": 3835,
+    "comparePrice": 5369,
+    "stock": 80,
+    "brand": "Lumina",
+    "rating": 3.9,
+    "reviewCount": 734,
+    "isFeatured": false,
+    "categorySlug": "beauty",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1598440947619-22a45a05d6da?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "2.7 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  },
+  {
+    "name": "Apex Nail Polish Remover Premium",
+    "slug": "beauty-nail-polish-remover-24",
+    "description": "A fantastic Nail Polish Remover for all your needs. Durable and long-lasting!",
+    "price": 3372,
+    "comparePrice": 4355,
+    "stock": 117,
+    "brand": "Apex",
+    "rating": 4.5,
+    "reviewCount": 759,
+    "isFeatured": false,
+    "categorySlug": "beauty",
+    "images": [
+      {
+        "url": "https://images.unsplash.com/photo-1598440947619-22a45a05d6da?w=600",
+        "isPrimary": true,
+        "displayOrder": 0
+      }
+    ],
+    "specs": [
+      {
+        "key": "Weight",
+        "value": "4.8 kg"
+      },
+      {
+        "key": "Material",
+        "value": "Mixed"
+      }
+    ]
+  }
 ];
 
 async function main() {
   console.log('🌱 Starting seed...');
 
   // Clear existing data
-  await prisma.orderItem.deleteMany();
-  await prisma.order.deleteMany();
-  await prisma.cartItem.deleteMany();
-  await prisma.wishlist.deleteMany();
-  await prisma.productSpecification.deleteMany();
-  await prisma.productImage.deleteMany();
-  await prisma.product.deleteMany();
-  await prisma.category.deleteMany();
-  await prisma.user.deleteMany();
+  try { await prisma.orderItem.deleteMany(); } catch (e) {}
+  try { await prisma.order.deleteMany(); } catch (e) {}
+  try { await prisma.cartItem.deleteMany(); } catch (e) {}
+  try { await prisma.wishlist.deleteMany(); } catch (e) {}
+  try { await prisma.productSpecification.deleteMany(); } catch (e) {}
+  try { await prisma.productImage.deleteMany(); } catch (e) {}
+  try { await prisma.product.deleteMany(); } catch (e) {}
+  try { await prisma.category.deleteMany(); } catch (e) {}
+  try { await prisma.user.deleteMany(); } catch (e) {}
 
   console.log('🗑️  Cleared existing data');
 
