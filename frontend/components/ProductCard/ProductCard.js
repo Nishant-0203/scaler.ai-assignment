@@ -75,22 +75,6 @@ export default function ProductCard({ product }) {
             <p className={styles.savings}>Save {discount}%</p>
           )}
 
-          <p className={styles.delivery}>FREE Delivery by <strong>Tomorrow</strong></p>
-
-          <button
-            className={`${styles.addBtn} ${added ? styles.addedBtn : ''}`}
-            onClick={handleAddToCart}
-            disabled={adding || added || product.stock === 0}
-            id={`add-to-cart-${product.id}`}
-          >
-            {product.stock === 0
-              ? 'Out of Stock'
-              : adding
-              ? 'Adding...'
-              : added
-              ? '✓ Added to Cart'
-              : 'Add to Cart'}
-          </button>
         </div>
       </div>
     </Link>

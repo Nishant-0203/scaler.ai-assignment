@@ -64,6 +64,12 @@ export default function Navbar() {
 
         {/* Search Bar */}
         <form className={styles.searchForm} onSubmit={handleSearch}>
+          <select className={styles.searchSelect} aria-label="Select category">
+            <option value="all">All</option>
+            {categories.map((cat, idx) => (
+              <option key={idx} value={cat}>{cat}</option>
+            ))}
+          </select>
           <input
             type="text"
             className={styles.searchInput}

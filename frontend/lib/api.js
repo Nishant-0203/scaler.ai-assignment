@@ -1,4 +1,18 @@
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+// NEXT_PUBLIC_API_URL is what Next.js sends to the browser.
+// When Next.js runs on the server (SSR), it also uses this to fetch data.
+// But the server is in a Docker container, so it can't reach "localhost:5000" that refers to its own container.
+// It needs to reach the "backend:5000" service instead.
+// We handle both client and server side here since the same API functions are used by both.
+const getApiBase = () => {
+    if (typeof window === 'undefined') {
+        // We are on the server (Next.js SSR)
+        return process.env.SERVER_API_URL || 'http://backend:5000/api';
+    }
+    // We are on the client (Browser)
+    return process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+};
+
+const API_BASE = getApiBase();
 
 const getHeaders = () => {
   const headers = { 'Content-Type': 'application/json' };
