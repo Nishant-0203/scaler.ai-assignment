@@ -1,0 +1,287 @@
+.page { background: var(--amazon-bg); }
+
+/* HERO */
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  transition: background 0.8s ease;
+}
+
+.heroContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 80px;
+  gap: 40px;
+}
+
+.heroText { flex: 1; }
+.heroTag {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 12px;
+}
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 16px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+.heroSubtitle {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+.heroCta {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.heroCta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  text-decoration: none;
+  color: #111;
+}
+
+.heroImage {
+  flex: 1;
+  max-width: 500px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  transform: perspective(1000px) rotateY(-5deg);
+  transition: transform 0.3s ease;
+}
+.heroImage:hover { transform: perspective(1000px) rotateY(0deg); }
+.heroImage img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.heroDots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+.dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  padding: 0;
+}
+.dotActive {
+  background: #fff;
+  width: 24px;
+  border-radius: 4px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.3);
+  color: #fff;
+  border: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background 0.2s;
+  line-height: 1;
+  z-index: 2;
+}
+.arrow:hover { background: rgba(0,0,0,0.6); }
+.arrowLeft { left: 20px; }
+.arrowRight { right: 20px; }
+
+/* MAIN CONTENT */
+.mainContent {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+
+/* SECTION */
+.section { margin-bottom: 32px; }
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--amazon-orange);
+}
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--amazon-text);
+}
+.seeAll {
+  color: var(--amazon-link);
+  font-size: 0.85rem;
+}
+.seeAll:hover { color: var(--amazon-link-hover); }
+
+/* CATEGORIES */
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+}
+.categoryCard {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  text-align: center;
+  padding: 16px 8px;
+  border: 1px solid var(--amazon-border);
+  transition: all 0.2s;
+}
+.categoryCard:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+  text-decoration: none;
+  border-color: var(--amazon-orange);
+}
+.categoryImageWrapper {
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 8px;
+  border: 2px solid var(--amazon-border);
+}
+.categoryImage {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.3s;
+}
+.categoryCard:hover .categoryImage { transform: scale(1.1); }
+.categoryName {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--amazon-text);
+  margin-bottom: 2px;
+}
+.categoryCount { font-size: 0.72rem; color: var(--amazon-text-muted); }
+
+/* DEAL BANNER */
+.dealBanner {
+  background: linear-gradient(135deg, #131921 0%, #232F3E 100%);
+  border-radius: 12px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  gap: 32px;
+}
+.dealLeft { flex: 1; }
+.dealTag {
+  display: inline-block;
+  background: #CC0C39;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+.dealTitle {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+.dealSubtitle {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+.dealImages {
+  display: flex;
+  gap: 12px;
+}
+.dealImg {
+  width: 160px; height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+/* PRODUCTS */
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+/* FEATURE STRIP */
+.featureStrip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--amazon-border);
+}
+.featureIcon { font-size: 2rem; }
+.featureTitle { font-size: 0.9rem; font-weight: 700; color: var(--amazon-text); }
+.featureDesc { font-size: 0.75rem; color: var(--amazon-text-secondary); }
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .categoryGrid { grid-template-columns: repeat(3, 1fr); }
+  .productGrid { grid-template-columns: repeat(3, 1fr); }
+  .featureStrip { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .heroContent { padding: 32px 24px; flex-direction: column; }
+  .heroTitle { font-size: 2rem; }
+  .heroImage { max-width: 100%; transform: none; }
+  .heroImage img { height: 200px; }
+  .categoryGrid { grid-template-columns: repeat(3, 1fr); }
+  .productGrid { grid-template-columns: repeat(2, 1fr); }
+  .dealBanner { flex-direction: column; text-align: center; }
+  .dealImages { justify-content: center; }
+}
+@media (max-width: 480px) {
+  .categoryGrid { grid-template-columns: repeat(2, 1fr); }
+  .featureStrip { grid-template-columns: 1fr; }
+  .heroCta { padding: 12px 24px; }
+}

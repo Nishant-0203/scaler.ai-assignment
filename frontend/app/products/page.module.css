@@ -1,0 +1,166 @@
+.page { background: var(--amazon-bg); min-height: 80vh; }
+
+.topBar {
+  background: #fff;
+  border-bottom: 1px solid var(--amazon-border);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 60px;
+  z-index: 10;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.resultCount { font-size: 0.9rem; color: var(--amazon-text-secondary); }
+.sortWrapper { display: flex; align-items: center; gap: 8px; }
+.sortLabel { font-size: 0.85rem; font-weight: 600; }
+.sortSelect {
+  padding: 6px 10px;
+  border: 1px solid var(--amazon-border);
+  border-radius: 4px;
+  font-size: 0.85rem;
+  background: #fff;
+  cursor: pointer;
+}
+
+.layout { display: flex; align-items: flex-start; }
+
+/* SIDEBAR */
+.sidebar {
+  width: 240px;
+  min-width: 240px;
+  background: #fff;
+  border-right: 1px solid var(--amazon-border);
+  min-height: calc(100vh - 120px);
+  padding: 16px;
+  position: sticky;
+  top: 112px;
+  max-height: calc(100vh - 112px);
+  overflow-y: auto;
+}
+.filterSection { margin-bottom: 4px; }
+.filterTitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--amazon-text);
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--amazon-border);
+}
+.filterList { list-style: none; display: flex; flex-direction: column; gap: 2px; }
+.filterItem {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  font-size: 0.82rem;
+  padding: 5px 8px;
+  cursor: pointer;
+  color: var(--amazon-text);
+  border-radius: 3px;
+  transition: background 0.15s;
+}
+.filterItem:hover { background: #f0f2f2; color: var(--amazon-link); }
+.filterCount { color: var(--amazon-text-muted); font-size: 0.75rem; }
+
+.ratingFilter {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  font-size: 0.82rem;
+  padding: 4px 8px;
+  cursor: pointer;
+  color: var(--amazon-orange);
+  border-radius: 3px;
+}
+.ratingFilter:hover { background: #f0f2f2; }
+
+.activeFilter {
+  background: linear-gradient(to right, #fff3e0, #fff8f0) !important;
+  font-weight: 700 !important;
+  color: var(--amazon-text) !important;
+  border-left: 3px solid var(--amazon-orange) !important;
+}
+
+.priceInputs { display: flex; align-items: center; gap: 6px; margin-bottom: 8px; }
+.priceInput {
+  width: 80px;
+  padding: 5px 8px;
+  border: 1px solid var(--amazon-border);
+  border-radius: 3px;
+  font-size: 0.8rem;
+}
+.applyBtn {
+  background: var(--amazon-yellow-btn);
+  border: 1px solid #a88734;
+  padding: 5px 12px;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.applyBtn:hover { background: var(--amazon-yellow-btn-hover); }
+
+.filterDivider { border-top: 1px solid var(--amazon-border); margin: 12px 0; }
+.clearBtn {
+  background: none;
+  border: none;
+  color: var(--amazon-link);
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 4px 0;
+}
+.clearBtn:hover { text-decoration: underline; }
+
+/* PRODUCTS */
+.productsArea { flex: 1; padding: 16px; min-width: 0; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 12px;
+}
+
+/* PAGINATION */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+.pageBtn {
+  padding: 6px 12px;
+  border: 1px solid var(--amazon-border);
+  border-radius: 3px;
+  background: #fff;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.pageBtn:hover:not(:disabled) { background: #f0f2f2; border-color: #999; }
+.pageBtn:disabled { opacity: 0.4; cursor: not-allowed; }
+.pageBtnActive {
+  background: var(--amazon-orange-btn) !important;
+  border-color: var(--amazon-orange-btn) !important;
+  color: #fff !important;
+  font-weight: 700;
+}
+
+/* NO RESULTS */
+.noResults {
+  text-align: center;
+  padding: 60px 20px;
+}
+.noResultsIcon { font-size: 4rem; margin-bottom: 16px; }
+.noResults h2 { font-size: 1.5rem; margin-bottom: 8px; }
+.noResults p { color: var(--amazon-text-secondary); margin-bottom: 24px; }
+
+@media (max-width: 768px) {
+  .layout { flex-direction: column; }
+  .sidebar { width: 100%; min-width: unset; position: static; max-height: none; }
+  .topBar { top: 0; position: relative; }
+}

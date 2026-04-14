@@ -1,0 +1,43 @@
+:root {
+  --amazon-blue: #131921;
+  --amazon-light-blue: #232f3e;
+  --amazon-orange: #f90;
+  --amazon-yellow: #febd69;
+  --background: #eaeded;
+  --text-dark: #0f1111;
+  --link-color: #007185;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  background-color: var(--background);
+  color: var(--text-dark);
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #c45500;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn, select, input {
+  font-family: inherit;
+}

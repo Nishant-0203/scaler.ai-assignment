@@ -1,0 +1,102 @@
+.page {
+  min-height: 100vh;
+  background: var(--amazon-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+.logoText { font-size: 2rem; font-weight: 700; color: var(--amazon-text); }
+.logoIn { font-size: 1rem; color: var(--amazon-orange); font-weight: 700; }
+
+.card {
+  background: #fff;
+  border: 1px solid var(--amazon-border);
+  border-radius: 8px;
+  padding: 28px 32px;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(to bottom, #f7dfa5, var(--amazon-yellow-btn));
+  border: 1px solid #a88734;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-top: 4px;
+  transition: background 0.15s;
+  font-weight: 500;
+}
+.submitBtn:hover:not(:disabled) { background: linear-gradient(to bottom, #f5d78e, #F7CA00); }
+.submitBtn:disabled { opacity: 0.7; cursor: not-allowed; }
+
+.terms {
+  font-size: 0.75rem;
+  color: var(--amazon-text-secondary);
+  line-height: 1.5;
+  margin-top: 16px;
+}
+.terms a { color: var(--amazon-link); }
+
+.demoBox {
+  background: #f0f8ff;
+  border: 1px solid #bee5eb;
+  border-radius: 4px;
+  padding: 10px 14px;
+  font-size: 0.8rem;
+  color: #0c5460;
+  margin-top: 16px;
+  line-height: 1.6;
+}
+
+.dividerRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 380px;
+  margin: 20px 0 12px;
+}
+.dividerLine { flex: 1; border-top: 1px solid var(--amazon-border); border-bottom: none; }
+.dividerText { font-size: 0.8rem; color: var(--amazon-text-secondary); white-space: nowrap; }
+
+.createBtn {
+  display: block;
+  width: 100%;
+  max-width: 380px;
+  padding: 10px;
+  background: linear-gradient(to bottom, #f7f8f8, #e7e9ec);
+  border: 1px solid #adb1b8;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--amazon-text);
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.createBtn:hover { background: linear-gradient(to bottom, #e7e9ec, #cfd2d6); color: var(--amazon-text); text-decoration: none; }
+
+.signInRow {
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: var(--amazon-text-secondary);
+}
+.signInLink { color: var(--amazon-link); text-decoration: none; }
+.signInLink:hover { text-decoration: underline; color: var(--amazon-link-hover); }
