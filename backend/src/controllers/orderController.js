@@ -102,8 +102,15 @@ const createOrder = async (req, res) => {
 
     res.status(201).json(order);
   } catch (err) {
-    console.error("DEBUG ORDER ERROR:", err);
-    res.status(500).json({ error: 'Server error', details: err.message });
+    console.error("[CREATE_ORDER_ERROR]", {
+      message: err.message,
+      code: err.code,
+      stack: err.stack
+    });
+    res.status(500).json({ 
+      error: 'Failed to create order', 
+      details: process.env.NODE_ENV === 'production' ? undefined : err.message 
+    });
   }
 };
 
@@ -152,8 +159,8 @@ const getOrdersBySession = async (req, res) => {
     });
     res.json(orders);
   } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: 'Server error' });
+    console.error("[GET_ORDERS_BY_SESSION_ERROR]", err.message);
+    res.status(500).json({ error: 'Server error', details: process.env.NODE_ENV === 'production' ? undefined : err.message });
   }
 };
 

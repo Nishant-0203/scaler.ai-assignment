@@ -6,6 +6,7 @@ const nextConfig = {
     root: path.join(process.cwd(), '../'),
   },
   images: {
+    unoptimized: true, // Disable Next.js image optimization for external images in production
     remotePatterns: [
       {
         protocol: 'https',

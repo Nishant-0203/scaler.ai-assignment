@@ -50,3 +50,22 @@ PORT=5000
 - Uses a default session identifier or authenticated JWT token based on implementation details.
 - Fake payment gateway is used during checkout (mocked ordering process).
 - Sample product data provided for demonstration covers a few core target categories.
+
+## Deployment
+
+For detailed deployment instructions, refer to [DEPLOYMENT.md](./DEPLOYMENT.md)
+
+### Quick Start for Production
+1. **Set up a PostgreSQL database** (Neon, AWS RDS, or Supabase recommended)
+2. **Backend deployment on Vercel**:
+   - Add `DATABASE_URL` and other required environment variables
+   - Deploy from the `backend/` directory
+3. **Frontend deployment on Vercel**:
+   - Set `NEXT_PUBLIC_API_URL` to your deployed backend URL
+   - Deploy from the `frontend/` directory
+4. **Health Check**: Visit `/api/health` on your backend to verify database connection
+
+### Troubleshooting
+- **Image 404 errors**: Already fixed - Next.js image optimization is disabled for external images
+- **API errors (500)**: Check that DATABASE_URL is set and database is initialized with `npx prisma db push`
+- **CORS issues**: Ensure FRONTEND_URL is set correctly in backend environment variables

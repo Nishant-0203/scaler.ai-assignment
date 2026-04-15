@@ -4,6 +4,7 @@ const helmet = require('helmet');
 const compression = require('compression');
 const rateLimit = require('express-rate-limit');
 const dotenv = require('dotenv');
+const { PrismaClient } = require('@prisma/client');
 
 dotenv.config();
 
@@ -16,6 +17,7 @@ const wishlistRoutes = require('./src/routes/wishlist');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+const prisma = new PrismaClient();
 
 // Security Middleware
 app.use(helmet());
@@ -61,8 +63,19 @@ app.use('/api/orders', orderRoutes);
 app.use('/api/wishlist', wishlistRoutes);
 
 // Health check
-app.get('/api/health', (req, res) => {
-  res.json({ status: 'OK', message: 'Amazon Clone API is running' });
+app.get('/api/health', async (req, res) => {
+  try {
+    // Test database connection
+    await prisma.$queryRaw`SELECT 1`;
+    res.json({ status: 'OK', message: 'Amazon Clone API is running', database: 'connected' });
+  } catch (err) {
+    console.error("[HEALTH_CHECK_ERROR]", err.message);
+    res.status(503).json({ 
+      status: 'ERROR', 
+      message: 'Amazon Clone API is running but database is disconnected',
+      error: process.env.NODE_ENV === 'production' ? undefined : err.message
+    });
+  }
 });
 
 // Root route
@@ -75,14 +88,29 @@ app.use((err, req, res, next) => {
   console.error("Express Error:", err);
   res.status(err.status || 500).json({
     error: err.message || 'Internal Server Error',
-    details: err.stack
+    details: process.env.NODE_ENV === 'production' ? undefined : err.stack
   });
 });
 
+// Catch-all for 404s - Must be after all other routes
+app.use('/{*any}', (req, res) => {
+  res.status(404).json({ error: 'Not Found' });
+});
+
 if (process.env.NODE_ENV !== 'production') {
-  app.listen(PORT, () => {
-    console.log(`🚀 Server running on http://localhost:${PORT}`);
-  });
+  // Test database connection before starting server in development
+  prisma.$queryRaw`SELECT 1`
+    .then(() => {
+      console.log('✓ Database connected');
+      app.listen(PORT, () => {
+        console.log(`🚀 Server running on http://localhost:${PORT}`);
+      });
+    })
+    .catch((err) => {
+      console.error('✗ Database connection failed:', err.message);
+      console.error('Make sure DATABASE_URL is set correctly');
+      process.exit(1);
+    });
 }
 
 module.exports = app;
