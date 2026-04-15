@@ -55,11 +55,13 @@ const createOrder = async (req, res) => {
 
     // Create order in transaction
     const order = await prisma.$transaction(async (tx) => {
+      const userId = req.userId || (req.auth ? req.auth.userId : null);
+      
       const newOrder = await tx.order.create({
         data: {
           orderNumber: generateOrderNumber(),
           sessionId,
-          userId: req.userId || (req.auth ? req.auth.userId : null),
+          ...(userId && { userId }), // Only include userId if it's not null
           subtotal,
           shipping,
           total,
@@ -167,10 +169,14 @@ const getOrdersBySession = async (req, res) => {
 const getOrdersByUser = async (req, res) => {
   try {
     const userId = req.userId || (req.auth ? req.auth.userId : null);
-    const whereClause = { userId: userId };
+    
+    // Return empty array if no userId
+    if (!userId) {
+      return res.json([]);
+    }
 
     const orders = await prisma.order.findMany({
-      where: whereClause,
+      where: { userId },
       include: {
         orderItems: {
           include: {
@@ -184,8 +190,8 @@ const getOrdersByUser = async (req, res) => {
     });
     res.json(orders);
   } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: 'Server error' });
+    console.error('[GET_ORDERS_BY_USER_ERROR]', err.message);
+    res.status(500).json({ error: 'Server error', details: process.env.NODE_ENV === 'production' ? undefined : err.message });
   }
 };
 

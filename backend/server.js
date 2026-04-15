@@ -25,12 +25,26 @@ app.use(helmet());
 // Performance Middleware
 app.use(compression());
 
-// Rate Limiting
+// Rate Limiting with Forwarded header support for proxies (Railway, Vercel)
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 100, // Limit each IP to 100 requests per `window` (here, per 15 minutes)
   standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
   legacyHeaders: false, // Disable the `X-RateLimit-*` headers
+  keyGenerator: (req, res) => {
+    // Use X-Forwarded-For header if available (for proxies like Vercel/Railway)
+    // Otherwise fall back to req.ip
+    const forwardedFor = req.headers['x-forwarded-for'];
+    if (forwardedFor) {
+      // x-forwarded-for can be comma-separated, get the client IP (first one)
+      return typeof forwardedFor === 'string' ? forwardedFor.split(',')[0].trim() : forwardedFor[0];
+    }
+    return req.ip;
+  },
+  skip: (req, res) => {
+    // Skip rate limiting for health checks
+    return req.path === '/' && req.method === 'GET';
+  }
 });
 app.use('/api', limiter);
 
