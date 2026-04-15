@@ -58,6 +58,11 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'OK', message: 'Amazon Clone API is running' });
 });
 
+// Root route
+app.get('/', (req, res) => {
+  res.json({ status: 'OK', message: 'Amazon Clone API is running. Go to /api/health for health check.' });
+});
+
 // Error handler
 app.use((err, req, res, next) => {
   console.error(err.stack);
@@ -69,3 +74,6 @@ app.use((err, req, res, next) => {
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
+
+module.exports = app;
+
