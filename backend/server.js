@@ -72,9 +72,10 @@ app.get('/', (req, res) => {
 
 // Error handler
 app.use((err, req, res, next) => {
-  console.error(err.stack);
+  console.error("Express Error:", err);
   res.status(err.status || 500).json({
-    error: err.message || 'Internal Server Error'
+    error: err.message || 'Internal Server Error',
+    details: err.stack
   });
 });
 

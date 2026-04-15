@@ -102,8 +102,8 @@ const createOrder = async (req, res) => {
 
     res.status(201).json(order);
   } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: 'Server error' });
+    console.error("DEBUG ORDER ERROR:", err);
+    res.status(500).json({ error: 'Server error', details: err.message });
   }
 };
 
