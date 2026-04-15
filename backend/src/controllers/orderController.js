@@ -1,5 +1,6 @@
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
+const { sendOrderConfirmationEmail } = require('../utils/sendEmail');
 
 const generateOrderNumber = () => {
   const ts = Date.now().toString(36).toUpperCase();
@@ -95,6 +96,9 @@ const createOrder = async (req, res) => {
 
       return newOrder;
     });
+
+    // Send order confirmation email asynchronously
+    sendOrderConfirmationEmail(order.id, shippingEmail, order).catch(console.error);
 
     res.status(201).json(order);
   } catch (err) {
