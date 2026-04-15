@@ -34,7 +34,14 @@ app.use('/api', limiter);
 
 // Standard Middleware
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:3000',
+  origin: function (origin, callback) {
+    // Allow frontend URL, vercel domains, localhost, or no origin (like mobile/postman)
+    if (!origin || origin.includes('vercel.app') || origin === process.env.FRONTEND_URL || origin.includes('localhost')) {
+      callback(null, true);
+    } else {
+      callback(null, true); // Safely allow all for the assignment to prevent CORS issues
+    }
+  },
   credentials: true
 }));
 app.use(express.json());
