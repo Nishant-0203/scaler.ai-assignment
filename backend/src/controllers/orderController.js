@@ -127,7 +127,7 @@ const createOrder = async (req, res) => {
       stack: err.stack
     });
     res.status(500).json({ 
-      error: 'Failed to create order', 
+      error: `Failed to create order: ${err.message}`, 
       details: err.message,
       stack: err.stack
     });
