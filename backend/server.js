@@ -105,7 +105,7 @@ app.use((err, req, res, next) => {
   console.error("Express Error:", err);
   res.status(err.status || 500).json({
     error: err.message || 'Internal Server Error',
-    details: process.env.NODE_ENV === 'production' ? undefined : err.stack
+    details: err.stack
   });
 });
 

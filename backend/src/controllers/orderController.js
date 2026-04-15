@@ -128,7 +128,8 @@ const createOrder = async (req, res) => {
     });
     res.status(500).json({ 
       error: 'Failed to create order', 
-      details: process.env.NODE_ENV === 'production' ? undefined : err.message 
+      details: err.message,
+      stack: err.stack
     });
   }
 };
