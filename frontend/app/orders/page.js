@@ -29,12 +29,10 @@ export default function OrdersPage() {
     const loadOrders = async () => {
       try {
         const sessionId = getSessionId();
-        let data;
+        let data = [];
         if (isSignedIn && user) {
           const token = await getToken();
           data = await orderAPI.getMyOrders(sessionId, token);
-        } else {
-          data = await orderAPI.getBySession(sessionId);
         }
         setOrders(data);
       } catch (err) {

@@ -15,8 +15,6 @@ model User {
   passwordHash String   @map("password_hash")
   createdAt    DateTime @default(now()) @map("created_at")
 
-  orders Order[]
-
   @@map("users")
 }
 
@@ -100,7 +98,7 @@ model CartItem {
 model Order {
   id              Int      @id @default(autoincrement())
   orderNumber     String   @unique @map("order_number")
-  userId          Int?     @map("user_id")
+  userId          String?  @map("user_id")
   sessionId       String   @map("session_id")
   status          String   @default("pending")
   subtotal        Decimal  @db.Decimal(10, 2)
@@ -116,7 +114,6 @@ model Order {
   shippingCountry String   @default("India") @map("shipping_country")
   createdAt       DateTime @default(now()) @map("created_at")
 
-  user       User?       @relation(fields: [userId], references: [id])
   orderItems OrderItem[]
 
   @@index([sessionId])

@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { orderAPI } from '@/lib/api';
+import { useAuth } from '@clerk/nextjs';
 import styles from './page.module.css';
 
 const formatPrice = (n) =>
@@ -10,16 +11,25 @@ const formatPrice = (n) =>
 
 export default function OrderConfirmationPage() {
   const { id } = useParams();
+  const { isLoaded, getToken } = useAuth();
   const [order, setOrder] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (!id) return;
-    orderAPI.getById(id)
-      .then(setOrder)
-      .catch(console.error)
-      .finally(() => setLoading(false));
-  }, [id]);
+    if (!id || !isLoaded) return;
+    const fetchOrder = async () => {
+      try {
+        const token = await getToken();
+        const data = await orderAPI.getById(id, token);
+        setOrder(data);
+      } catch (err) {
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchOrder();
+  }, [id, isLoaded, getToken]);
 
   if (loading) return <div className="loading-overlay"><div className="spinner"/></div>;
   if (!order) return (

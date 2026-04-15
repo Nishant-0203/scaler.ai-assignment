@@ -76,8 +76,11 @@ export const orderAPI = {
     if (token) headers['Authorization'] = `Bearer ${token}`;
     return fetch(`${API_BASE}/orders`, { method: 'POST', headers, body: JSON.stringify(data) }).then(handleResponse);
   },
-  getById: (id) =>
-    fetch(`${API_BASE}/orders/${id}`, { headers: getHeaders() }).then(handleResponse),
+  getById: (id, token) => {
+    const headers = getHeaders();
+    if (token) headers['Authorization'] = `Bearer ${token}`;
+    return fetch(`${API_BASE}/orders/${id}`, { headers }).then(handleResponse);
+  },
   getBySession: (sessionId) =>
     fetch(`${API_BASE}/orders/session/${sessionId}`, { headers: getHeaders() }).then(handleResponse),
   getMyOrders: (sessionId, token) => {

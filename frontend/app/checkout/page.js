@@ -21,7 +21,7 @@ const INDIAN_STATES = [
 
 export default function CheckoutPage() {
   const router = useRouter();
-  const { items, cartSubtotal, cartCount } = useCart();
+  const { items, cartSubtotal, cartCount, clearCart } = useCart();
   const { isLoaded, isSignedIn, user } = useUser();
   const { getToken } = useAuth();
 
@@ -43,6 +43,12 @@ export default function CheckoutPage() {
       setFormData(prev => ({ ...prev, shippingName: user.fullName || '', shippingEmail: user.primaryEmailAddress?.emailAddress || '' }));
     }
   }, [user]);
+
+  useEffect(() => {
+    if (isLoaded && !isSignedIn) {
+      router.push('/login');
+    }
+  }, [isLoaded, isSignedIn, router]);
 
   const shipping = cartSubtotal > 499 ? 0 : 40;
   const total = cartSubtotal + shipping;
@@ -84,6 +90,7 @@ export default function CheckoutPage() {
       let token = null;
       if (isSignedIn) token = await getToken();
       const order = await orderAPI.create({ sessionId, ...formData }, token);
+      await clearCart(); // Ensure the frontend explicitly wipes the cart context locally too!
       router.push(`/order-confirmation/${order.id}`);
     } catch (err) {
       console.error(err);
@@ -91,6 +98,10 @@ export default function CheckoutPage() {
       setPlacing(false);
     }
   };
+
+  if (!isLoaded || !isSignedIn) {
+    return null; // Don't render while redirecting
+  }
 
   if (items.length === 0 && !placing) {
     return (

@@ -1,5 +1,6 @@
 'use client';
-import { createContext, useContext, useReducer, useEffect, useCallback } from 'react';
+import { createContext, useContext, useReducer, useEffect, useCallback, useState } from 'react';
+import { useUser } from '@clerk/nextjs';
 import { cartAPI } from '@/lib/api';
 import { getSessionId } from '@/lib/session';
 
@@ -20,6 +21,7 @@ const cartReducer = (state, action) => {
 
 export function CartProvider({ children }) {
   const [state, dispatch] = useReducer(cartReducer, { items: [], loading: false, error: null });
+  const { isLoaded, user } = useUser();
 
   const fetchCart = useCallback(async () => {
     try {
@@ -33,8 +35,18 @@ export function CartProvider({ children }) {
   }, []);
 
   useEffect(() => {
-    fetchCart();
-  }, [fetchCart]);
+    if (isLoaded) {
+      const currentUserStr = user ? user.id : 'null';
+      const storedUserStr = localStorage.getItem('amazon_last_user') || 'null';
+
+      if (storedUserStr !== currentUserStr) {
+        localStorage.removeItem('amazon_session_id'); // clear old session
+        getSessionId(); // immediately create new session
+        localStorage.setItem('amazon_last_user', currentUserStr);
+      }
+      fetchCart();
+    }
+  }, [isLoaded, user?.id, fetchCart]);
 
   const addToCart = async (productId, quantity = 1) => {
     try {

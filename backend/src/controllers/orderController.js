@@ -58,7 +58,7 @@ const createOrder = async (req, res) => {
         data: {
           orderNumber: generateOrderNumber(),
           sessionId,
-          userId: req.userId || null,
+          userId: req.userId || (req.auth ? req.auth.userId : null),
           subtotal,
           shipping,
           total,
@@ -119,6 +119,10 @@ const getOrder = async (req, res) => {
       }
     });
     if (!order) return res.status(404).json({ error: 'Order not found' });
+    console.log('GET ORDER -> Order userId:', order.userId, ' Req userId:', req.userId);
+    if (order.userId !== req.userId) {
+      return res.status(403).json({ error: 'Unauthorized' });
+    }
     res.json(order);
   } catch (err) {
     console.error(err);
@@ -151,10 +155,8 @@ const getOrdersBySession = async (req, res) => {
 
 const getOrdersByUser = async (req, res) => {
   try {
-    const { sessionId } = req.query;
-    const whereClause = sessionId 
-      ? { OR: [{ userId: req.userId }, { sessionId }] }
-      : { userId: req.userId };
+    const userId = req.userId || (req.auth ? req.auth.userId : null);
+    const whereClause = { userId: userId };
 
     const orders = await prisma.order.findMany({
       where: whereClause,
