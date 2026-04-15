@@ -73,9 +73,9 @@ const createOrder = async (req, res) => {
           orderNumber: generateOrderNumber(),
           sessionId,
           ...(userId && { userId }), // Only include userId if it's not null
-          subtotal,
-          shipping,
-          total,
+          subtotal: subtotal.toString(),
+          shipping: shipping.toString(),
+          total: total.toString(),
           shippingName,
           shippingEmail,
           shippingPhone: shippingPhone || '',
@@ -88,7 +88,7 @@ const createOrder = async (req, res) => {
             create: cartItems.map(item => ({
               productId: item.productId,
               name: item.product.name,
-              price: parseFloat(item.product.price),
+              price: parseFloat(item.product.price).toString(),
               quantity: item.quantity
             }))
           }
