@@ -10,6 +10,12 @@ const generateOrderNumber = () => {
 
 const createOrder = async (req, res) => {
   try {
+    console.log("[CREATE_ORDER] Request received", { 
+      userId: req.userId,
+      hasBody: !!req.body,
+      bodyKeys: req.body ? Object.keys(req.body) : [] 
+    });
+    
     const {
       sessionId,
       shippingName,
@@ -28,11 +34,13 @@ const createOrder = async (req, res) => {
     }
 
     // Get cart items
+    console.log("[CREATE_ORDER] Fetching cart items for sessionId:", sessionId);
     const cartItems = await prisma.cartItem.findMany({
       where: { sessionId },
       include: { product: true }
     });
 
+    console.log("[CREATE_ORDER] Cart items found:", cartItems.length);
     if (cartItems.length === 0) {
       return res.status(400).json({ error: 'Cart is empty' });
     }
@@ -53,18 +61,21 @@ const createOrder = async (req, res) => {
     const shipping = subtotal > 499 ? 0 : 40;
     const total = subtotal + shipping;
 
+    console.log("[CREATE_ORDER] Creating order:", { subtotal, shipping, total, itemCount: cartItems.length });
+
     // Create order in transaction
     const order = await prisma.$transaction(async (tx) => {
       const userId = req.userId || (req.auth ? req.auth.userId : null);
+      console.log("[CREATE_ORDER] Transaction started. UserId:", userId);
       
       const newOrder = await tx.order.create({
         data: {
           orderNumber: generateOrderNumber(),
           sessionId,
           ...(userId && { userId }), // Only include userId if it's not null
-          subtotal,
-          shipping,
-          total,
+          subtotal: subtotal.toString(),
+          shipping: shipping.toString(),
+          total: total.toString(),
           shippingName,
           shippingEmail,
           shippingPhone: shippingPhone || '',
@@ -77,13 +88,15 @@ const createOrder = async (req, res) => {
             create: cartItems.map(item => ({
               productId: item.productId,
               name: item.product.name,
-              price: item.product.price,
+              price: parseFloat(item.product.price).toString(),
               quantity: item.quantity
             }))
           }
         },
         include: { orderItems: true }
       });
+
+      console.log("[CREATE_ORDER] Order created with ID:", newOrder.id);
 
       // Decrease stock for each product
       for (const item of cartItems) {
@@ -92,16 +105,20 @@ const createOrder = async (req, res) => {
           data: { stock: { decrement: item.quantity } }
         });
       }
+      console.log("[CREATE_ORDER] Stock updated for all items");
 
       // Clear cart
       await tx.cartItem.deleteMany({ where: { sessionId } });
+      console.log("[CREATE_ORDER] Cart cleared");
 
       return newOrder;
     });
 
     // Send order confirmation email asynchronously
+    console.log("[CREATE_ORDER] Sending confirmation email to:", shippingEmail);
     sendOrderConfirmationEmail(order.id, shippingEmail, order).catch(console.error);
 
+    console.log("[CREATE_ORDER] Order created successfully:", order.id);
     res.status(201).json(order);
   } catch (err) {
     console.error("[CREATE_ORDER_ERROR]", {
