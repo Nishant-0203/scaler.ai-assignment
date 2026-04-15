@@ -73,9 +73,9 @@ const createOrder = async (req, res) => {
           orderNumber: generateOrderNumber(),
           sessionId,
           ...(userId && { userId }), // Only include userId if it's not null
-          subtotal: subtotal.toString(),
-          shipping: shipping.toString(),
-          total: total.toString(),
+          subtotal,
+          shipping,
+          total,
           shippingName,
           shippingEmail,
           shippingPhone: shippingPhone || '',
@@ -88,7 +88,7 @@ const createOrder = async (req, res) => {
             create: cartItems.map(item => ({
               productId: item.productId,
               name: item.product.name,
-              price: parseFloat(item.product.price).toString(),
+              price: parseFloat(item.product.price),
               quantity: item.quantity
             }))
           }
@@ -137,8 +137,12 @@ const createOrder = async (req, res) => {
 const getOrder = async (req, res) => {
   try {
     const { id } = req.params;
+    const orderId = parseInt(id, 10);
+    if (isNaN(orderId)) {
+      return res.status(400).json({ error: 'Invalid order ID' });
+    }
     const order = await prisma.order.findUnique({
-      where: { id: parseInt(id) },
+      where: { id: orderId },
       include: {
         orderItems: {
           include: {
